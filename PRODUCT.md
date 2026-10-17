@@ -41,8 +41,9 @@ The paste menu opens at the text cursor itself (⌘⇧V), not in a separate wind
 
 ## Brand Commitments
 
-- Name: Stash. App icon: white clipboard glyph on an indigo→violet rounded square (`src-tauri/icons/app-icon.png`).
-- The demo video (light warm-paper canvas, indigo accents, Montserrat display, JetBrains Mono keys) was approved by the user; the page should feel like the same product.
+- Name: Stash. Logo: the "stack" (three stacked rounded bars, newest and brightest in front) on a teal rounded square (`src-tauri/icons/app-icon.png`). Chosen by the user on 2026-10-17 after rejecting the earlier clipboard glyph.
+- Accent: teal #0e7490. The user explicitly rejected purple/indigo; never reintroduce it.
+- The demo video (warm-paper canvas, teal accents, Montserrat display, JetBrains Mono keys) was approved by the user; the page should feel like the same product.
 
 ## Evidence on Hand
 

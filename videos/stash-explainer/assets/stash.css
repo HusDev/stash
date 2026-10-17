@@ -3,7 +3,7 @@
    Montserrat (display) + JetBrains Mono (keys/labels); Inter only inside app UI. */
 
 :root {
-  --canvas: #0c0b1d;
+  --canvas: #f3f1ec;
   --canvas-2: #14123a;
   --ink: #eef0ff;
   --ink-dim: #a9abd6;

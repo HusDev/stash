@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T19:00:00Z",
+  "title": "Design System: Stash",
+  "extensions": {
+    "colorMeta": {
+      "teal": {
+        "role": "primary",
+        "displayName": "Stash Teal",
+        "tonalRamp": [
+          "#000f27",
+          "#002b44",
+          "#004963",
+          "#006884",
+          "#338ca9",
+          "#71afc5",
+          "#a9d2e2",
+          "#dbf3fc"
+        ],
+        "canonical": "oklch(52.0% 0.094 223)"
+      },
+      "teal-hover": {
+        "role": "primary",
+        "displayName": "Teal Hover",
+        "tonalRamp": [
+          "#000e26",
+          "#002b43",
+          "#004862",
+          "#0d6782",
+          "#3d8ba7",
+          "#76aec4",
+          "#acd1e1",
+          "#ddf3fc"
+        ],
+        "canonical": "oklch(47.9% 0.087 225)"
+      },
+      "teal-deep": {
+        "role": "primary",
+        "displayName": "Deep Teal",
+        "tonalRamp": [
+          "#000f22",
+          "#002b3f",
+          "#00485d",
+          "#1c677e",
+          "#448ba2",
+          "#7baec0",
+          "#aed1de",
+          "#def2fa"
+        ],
+        "canonical": "oklch(44.5% 0.079 222)"
+      },
+      "teal-base": {
+        "role": "primary",
+        "displayName": "Teal Base",
+        "tonalRamp": [
+          "#000f1f",
+          "#002a3b",
+          "#054759",
+          "#2d6679",
+          "#51899d",
+          "#82acbc",
+          "#b3d0db",
+          "#e1f2f8"
+        ],
+        "canonical": "oklch(37.7% 0.066 223)"
+      },
+      "teal-wash": {
+        "role": "primary",
+        "displayName": "Teal Wash",
+        "tonalRamp": [
+          "#000f27",
+          "#002b44",
+          "#004963",
+          "#006884",
+          "#338ca9",
+          "#71afc5",
+          "#a9d2e2",
+          "#dbf3fc"
+        ],
+        "canonical": "rgba(14, 116, 144, 0.12)"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "#0c0b08",
+          "#252420",
+          "#41403c",
+          "#5f5d59",
+          "#82807c",
+          "#a6a4a0",
+          "#cccac5",
+          "#f0eee9"
+        ],
+        "canonical": "oklch(95.8% 0.007 89)"
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Paper Shade",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#424039",
+          "#605d57",
+          "#838079",
+          "#a7a49d",
+          "#cdcac2",
+          "#f1eee6"
+        ],
+        "canonical": "oklch(93.1% 0.011 90)"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "#0a0a11",
+          "#23232b",
+          "#3f3f47",
+          "#5c5d65",
+          "#7f7f88",
+          "#a3a4ad",
+          "#c9c9d3",
+          "#ededf8"
+        ],
+        "canonical": "oklch(20.3% 0.014 285)"
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "tonalRamp": [
+          "#0a0a12",
+          "#23232c",
+          "#3f3f49",
+          "#5c5c67",
+          "#7f7f8a",
+          "#a3a3af",
+          "#c9c9d6",
+          "#ededfa"
+        ],
+        "canonical": "oklch(36.4% 0.017 286)"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "tonalRamp": [
+          "#0a0a12",
+          "#23232c",
+          "#3f3f48",
+          "#5c5c67",
+          "#7f7f8a",
+          "#a3a3af",
+          "#c9c9d5",
+          "#ededf9"
+        ],
+        "canonical": "oklch(45.3% 0.016 286)"
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "#0a0a11",
+          "#23232b",
+          "#3f3f47",
+          "#5c5d65",
+          "#7f7f88",
+          "#a3a4ad",
+          "#c9c9d3",
+          "#ededf8"
+        ],
+        "canonical": "rgba(22, 22, 40, 0.1)"
+      },
+      "window": {
+        "role": "neutral",
+        "displayName": "Window White",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242427",
+          "#3f3f42",
+          "#5d5d60",
+          "#808083",
+          "#a4a4a8",
+          "#cacace",
+          "#eeeef2"
+        ],
+        "canonical": "oklch(97.7% 0.005 286)"
+      },
+      "titlebar": {
+        "role": "neutral",
+        "displayName": "Titlebar Grey",
+        "tonalRamp": [
+          "#0b0b0e",
+          "#242427",
+          "#3f3f43",
+          "#5d5d61",
+          "#808084",
+          "#a4a4a9",
+          "#cacacf",
+          "#eeeef3"
+        ],
+        "canonical": "oklch(95.4% 0.007 286)"
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "canonical": "oklch(100.0% 0.000 90)"
+      },
+      "keycap-base": {
+        "role": "neutral",
+        "displayName": "Keycap Base",
+        "tonalRamp": [
+          "#0a0a12",
+          "#23232c",
+          "#3f3f48",
+          "#5c5c67",
+          "#7f7f8a",
+          "#a3a3af",
+          "#c9c9d5",
+          "#ededf9"
+        ],
+        "canonical": "oklch(85.8% 0.016 286)"
+      },
+      "band-text": {
+        "role": "neutral",
+        "displayName": "Band Text",
+        "tonalRamp": [
+          "#0a0916",
+          "#232231",
+          "#3e3e4e",
+          "#5c5c6c",
+          "#7e7e90",
+          "#a3a3b5",
+          "#c8c8dc",
+          "#ececff"
+        ],
+        "canonical": "oklch(79.2% 0.027 286)"
+      },
+      "danger": {
+        "role": "status",
+        "displayName": "Lost Red",
+        "tonalRamp": [
+          "#380000",
+          "#5d0000",
+          "#83001b",
+          "#a81f38",
+          "#d24a59",
+          "#ea8186",
+          "#ffb3b5",
+          "#ffe1e2"
+        ],
+        "canonical": "oklch(50.2% 0.171 17)"
+      },
+      "search-mark": {
+        "role": "status",
+        "displayName": "Search Mark",
+        "tonalRamp": [
+          "#270000",
+          "#460f00",
+          "#663000",
+          "#875100",
+          "#ad7500",
+          "#c99e2f",
+          "#e4c785",
+          "#feedc7"
+        ],
+        "canonical": "rgba(255, 196, 0, 0.45)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline; closing headline and story title use the same style larger."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Story station headings."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Privacy rule terms and shortcut table captions (19-21px)."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero paragraph, max 34em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy; 17px under 720px."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Window titles, tabs, chips, pills (13-15px)."
+      },
+      "keycap": {
+        "displayName": "Keycap",
+        "purpose": "Keycaps and keycap-style step numerals only."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Code, paths, timestamps, shortcut strings."
+      }
+    },
+    "shadows": [
+      {
+        "name": "window",
+        "value": "0 0 0 1px rgba(22,22,40,0.07), 0 2px 4px rgba(22,22,40,0.04), 0 30px 70px rgba(22,22,40,0.14)",
+        "purpose": "Rebuilt macOS windows."
+      },
+      {
+        "name": "popover",
+        "value": "0 0 0 1px rgba(22,22,40,0.1), 0 4px 10px rgba(22,22,40,0.06), 0 26px 60px rgba(22,22,40,0.2)",
+        "purpose": "Paste menu above a window."
+      },
+      {
+        "name": "card",
+        "value": "0 0 0 1px rgba(22,22,40,0.07), 0 18px 44px rgba(22,22,40,0.1)",
+        "purpose": "White cards on paper."
+      },
+      {
+        "name": "chip",
+        "value": "0 0 0 1px rgba(22,22,40,0.06), 0 8px 20px rgba(22,22,40,0.06)",
+        "purpose": "Small stacked items."
+      },
+      {
+        "name": "frame",
+        "value": "0 0 0 1px rgba(22,22,40,0.08), 0 40px 90px rgba(22,22,40,0.2)",
+        "purpose": "The film frame."
+      },
+      {
+        "name": "primary-lift",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.25), 0 1px 2px rgba(22,22,40,0.2), 0 12px 28px rgba(14,116,144,0.32)",
+        "purpose": "Primary button at rest."
+      },
+      {
+        "name": "primary-lift-hover",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.25), 0 2px 4px rgba(22,22,40,0.2), 0 18px 36px rgba(14,116,144,0.38)",
+        "purpose": "Primary button hover."
+      },
+      {
+        "name": "keycap-rest",
+        "value": "0 0.16em 0 #cfcfdb, 0 0.4em 0.9em rgba(22,22,40,0.08)",
+        "purpose": "Resting keycap: the only hard base in the system."
+      },
+      {
+        "name": "keycap-down",
+        "value": "0 0.04em 0 #08495b, 0 0.2em 0.5em rgba(14,116,144,0.3)",
+        "purpose": "Pressed keycap."
+      },
+      {
+        "name": "icon-glow",
+        "value": "0 24px 50px rgba(14,116,144,0.35)",
+        "purpose": "Under the large stack icon (0 4px 12px at nav size)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing."
+      },
+      {
+        "name": "key-press",
+        "value": "120ms",
+        "purpose": "Keycap dip and fill; menu row hover."
+      },
+      {
+        "name": "button",
+        "value": "200ms",
+        "purpose": "Button lift and color."
+      },
+      {
+        "name": "menu-pop",
+        "value": "220ms",
+        "purpose": "Paste menu scale 0.92 to 1 from its top-left."
+      },
+      {
+        "name": "state",
+        "value": "400ms",
+        "purpose": "Tracker pill and step changes."
+      },
+      {
+        "name": "lost-fade",
+        "value": "600ms",
+        "purpose": "Lost card rises 14px, blurs and fades when found."
+      },
+      {
+        "name": "land",
+        "value": "900ms",
+        "purpose": "Pasted text settles from a stronger teal wash."
+      },
+      {
+        "name": "caret-blink",
+        "value": "1.06s steps(1)",
+        "purpose": "Text caret; stops under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "1080px"
+      },
+      {
+        "name": "compact",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action per view: download.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v12m0 0-5-5m5 5 5-5M5 21h14\"/></svg>Download for macOS</a>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-btn-primary{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 26px;font:600 17px/1 var(--ui);text-decoration:none;border-radius:14px;background:var(--accent);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(22,22,40,0.2),0 12px 28px rgba(14,116,144,0.32);transition:transform .2s var(--ease-out),box-shadow .2s var(--ease-out),background .2s}.ds-btn-primary svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.ds-btn-primary:hover{background:#0c6782;transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 2px 4px rgba(22,22,40,0.2),0 18px 36px rgba(14,116,144,0.38)}.ds-btn-primary:active{transform:translateY(0)}.ds-btn-primary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action beside the primary: view source.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">View source</a>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-btn-ghost{display:inline-flex;align-items:center;height:56px;padding:0 26px;font:600 17px/1 var(--ui);text-decoration:none;border-radius:14px;color:var(--ink);border:1.5px solid rgba(22,22,40,0.18);background:rgba(255,255,255,0.4);transition:background .2s,border-color .2s}.ds-btn-ghost:hover{border-color:rgba(22,22,40,0.4);background:#fff}.ds-btn-ghost:focus-visible{outline:3px solid var(--accent);outline-offset:3px}"
+    },
+    {
+      "name": "Keycap",
+      "kind": "custom",
+      "refersTo": "keycap",
+      "description": "Every shortcut is drawn as a keycap; the demonstrated key is pressed.",
+      "html": "<span class=\"ds-keys\"><kbd class=\"ds-k\">⌘</kbd><kbd class=\"ds-k\">⇧</kbd><kbd class=\"ds-k\">V</kbd><span class=\"ds-then\">then</span><kbd class=\"ds-k ds-k-down\">2</kbd></span>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-keys{display:inline-flex;align-items:center;gap:10px;font-size:40px}.ds-then{font:500 0.42em var(--mono);color:var(--muted);margin:0 10px}.ds-k{display:inline-flex;align-items:center;justify-content:center;min-width:2em;height:2em;padding:0 0.5em;font:700 0.82em/1 var(--mono);color:var(--ink);background:linear-gradient(180deg,#fff 0%,#efeff4 100%);border:1.5px solid rgba(22,22,40,0.14);border-radius:0.42em;box-shadow:0 0.16em 0 #cfcfdb,0 0.4em 0.9em rgba(22,22,40,0.08);transition:transform .12s var(--ease-out),background .12s,color .12s,box-shadow .12s}.ds-k:hover,.ds-k-down{transform:translateY(0.12em);background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 0.04em 0 #08495b,0 0.2em 0.5em rgba(14,116,144,0.3)}"
+    },
+    {
+      "name": "macOS Window with Paste Menu",
+      "kind": "custom",
+      "refersTo": "window",
+      "description": "Rebuilt macOS chrome, the page's material; the paste menu opens at the caret with a teal selected row.",
+      "html": "<div class=\"ds-win\"><div class=\"ds-tb\"><span class=\"ds-lights\"><i></i><i></i><i></i></span><span class=\"ds-title\">Message to landlord</span></div><div class=\"ds-body\">My address is <span class=\"ds-caret\"></span><div class=\"ds-pm\"><div class=\"ds-row\"><span class=\"ds-n\">1</span><span class=\"ds-t\">npm run tauri dev</span><em>now</em></div><div class=\"ds-row ds-sel\"><span class=\"ds-n\">2</span><span class=\"ds-t\">Carrer de Mallorca 401, Barcelona</span><em>1h</em></div><div class=\"ds-row\"><span class=\"ds-n\">3</span><span class=\"ds-t\">hussein@example.com</span><em>40m</em></div></div></div></div>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-win{background:var(--win);border-radius:18px;box-shadow:0 0 0 1px rgba(22,22,40,0.07),0 2px 4px rgba(22,22,40,0.04),0 30px 70px rgba(22,22,40,0.14);font-family:var(--ui);max-width:460px;color:var(--ink)}.ds-tb{height:46px;display:flex;align-items:center;padding:0 16px;background:#efeff4;border-bottom:1px solid var(--line);border-radius:18px 18px 0 0}.ds-lights{display:flex;gap:8px}.ds-lights i{width:12px;height:12px;border-radius:50%;background:#ff5f57}.ds-lights i:nth-child(2){background:#febc2e}.ds-lights i:nth-child(3){background:#28c840}.ds-title{flex:1;text-align:center;margin-right:52px;font:600 14px var(--ui);color:var(--muted)}.ds-body{padding:24px 28px 28px;font-size:20px;line-height:1.55}.ds-caret{display:inline-block;width:2.5px;height:1.15em;background:var(--accent);vertical-align:-0.2em;border-radius:2px}.ds-pm{margin-top:10px;background:rgba(252,252,254,0.98);border-radius:16px;padding:6px;box-shadow:0 0 0 1px rgba(22,22,40,0.1),0 4px 10px rgba(22,22,40,0.06),0 26px 60px rgba(22,22,40,0.2);font-size:16px}.ds-row{display:flex;align-items:center;gap:11px;height:42px;padding:0 12px 0 8px;border-radius:9px;cursor:pointer;transition:background .12s}.ds-row:hover{background:rgba(22,22,40,0.05)}.ds-n{width:22px;height:22px;display:grid;place-items:center;border-radius:6px;background:rgba(22,22,40,0.07);font:700 12px var(--ui);color:var(--muted)}.ds-t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ds-row em{font:500 13px var(--mono);font-style:normal;color:#696973}.ds-sel,.ds-sel:hover{background:var(--accent);color:#fff}.ds-sel .ds-n{background:rgba(255,255,255,0.22);color:#fff}.ds-sel em{color:#fff}"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "Kind filters in the full window; active is the teal wash.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip ds-on\">All 128</button><button class=\"ds-chip\">Pinned 3</button><button class=\"ds-chip\">Links 21</button><button class=\"ds-chip\">Code 18</button></div>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-chips{display:flex;gap:4px}.ds-chip{font:600 13px var(--ui);padding:5px 11px;border-radius:99px;color:var(--muted);background:transparent;border:0;cursor:pointer;transition:background .12s}.ds-chip:hover{background:rgba(22,22,40,0.05)}.ds-chip:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.ds-on,.ds-on:hover{background:var(--accent-soft);color:var(--accent-deep)}"
+    },
+    {
+      "name": "Stack and Lost Chip",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Copies stacked as white chips; the lost copy is dashed and struck through.",
+      "html": "<div class=\"ds-stack\"><div class=\"ds-c\">npm run tauri dev<em>now</em></div><div class=\"ds-c\">github.com/HusDev/stash<em>12m</em></div><div class=\"ds-c ds-lost\">Carrer de Mallorca 401, Barcelona<em>1h</em></div></div>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-stack{display:flex;flex-direction:column;gap:10px;max-width:520px;font-family:var(--ui)}.ds-c{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:#fff;color:var(--ink);font-size:17px;box-shadow:0 0 0 1px rgba(22,22,40,0.06),0 8px 20px rgba(22,22,40,0.06)}.ds-c em{margin-left:auto;font:500 13px var(--mono);font-style:normal;color:#696973}.ds-c:nth-child(2){transform:scale(0.985)}.ds-lost{color:var(--ink-2);transform:scale(0.955);background:transparent;box-shadow:none;border:1.5px dashed rgba(22,22,40,0.3);text-decoration:line-through;text-decoration-thickness:2px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Sticky frosted-paper nav with the stack mark.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-mark\"><i></i><i></i><i></i></span>Stash</a><nav><a href=\"#\">How it works</a><a href=\"#\">Shortcuts</a><a href=\"#\">Install</a><a class=\"ds-gh\" href=\"#\">GitHub</a></nav></header>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(243,241,236,0.82);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--line)}.ds-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font:900 24px/1 var(--display);letter-spacing:-0.04em}.ds-mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(180deg,#1590ab,#0b5e75);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:0 4px 12px rgba(14,116,144,0.3)}.ds-mark i{display:block;height:5px;border-radius:2px}.ds-mark i:nth-child(1){width:15px;background:rgba(255,255,255,0.4)}.ds-mark i:nth-child(2){width:18px;background:rgba(255,255,255,0.68)}.ds-mark i:nth-child(3){width:21px;height:6px;background:#fff}.ds-nav nav{display:flex;align-items:center;gap:28px}.ds-nav nav a{color:var(--ink-2);text-decoration:none;font:500 16px var(--ui)}.ds-nav nav a:hover{color:var(--accent-deep)}.ds-nav nav a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}.ds-gh{padding:9px 14px;border-radius:10px;border:1.5px solid rgba(22,22,40,0.15)}"
+    },
+    {
+      "name": "Privacy Band",
+      "kind": "custom",
+      "refersTo": "privacy-band",
+      "description": "The single full-width ink passage: privacy rules.",
+      "html": "<section class=\"ds-band\"><h2>Your secrets stay secret.</h2><dl><dt>Passwords are never saved.</dt><dd>Stash sees the concealed mark and skips the copy entirely.</dd><dt>Nothing leaves your Mac.</dt><dd>History lives in <code>~/Library/Application Support</code>.</dd></dl></section>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-band{background:var(--ink);color:#eeeef6;padding:56px 40px}.ds-band h2{font:900 44px/1 var(--display);letter-spacing:-0.04em;color:#fff;margin:0 0 28px}.ds-band dl{margin:0;display:grid;gap:6px}.ds-band dt{font:700 21px var(--display);letter-spacing:-0.02em;color:#fff;margin-top:18px}.ds-band dd{margin:0;font:400 17px/1.6 var(--ui);color:#b9b9cc;max-width:32em}.ds-band code{font:500 0.88em var(--mono);background:rgba(255,255,255,0.1);color:#e7e7f4;padding:0.1em 0.4em;border-radius:6px}"
+    },
+    {
+      "name": "Shell",
+      "kind": "custom",
+      "refersTo": "shell",
+      "description": "Build-from-source commands with a copy button.",
+      "html": "<div class=\"ds-shell\"><button class=\"ds-copy\" type=\"button\">Copy</button><pre><code><span class=\"ds-pr\">$</span> git clone https://github.com/HusDev/stash.git\n<span class=\"ds-pr\">$</span> npm run build</code></pre></div>",
+      "css": ":host{--paper:#f3f1ec;--ink:#16161d;--ink-2:#3d3d47;--muted:#55555f;--line:rgba(22,22,40,0.1);--accent:#0e7490;--accent-deep:#0b5d73;--accent-soft:rgba(14,116,144,0.12);--win:#f7f7fb;--ease-out:cubic-bezier(0.16,1,0.3,1);--display:'Montserrat','Avenir Next',system-ui,sans-serif;--ui:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;} .ds-shell{position:relative;background:var(--ink);border-radius:16px;padding:22px 24px;box-shadow:0 20px 50px rgba(22,22,40,0.18)}.ds-shell pre{margin:0;overflow-x:auto}.ds-shell code{color:#e8e8f6;font:500 15px/1.9 var(--mono)}.ds-pr{color:#5fbfd3;user-select:none}.ds-copy{position:absolute;top:14px;right:14px;font:600 13px var(--ui);color:#e8e8f6;background:rgba(255,255,255,0.1);border:0;border-radius:8px;padding:7px 12px;cursor:pointer}.ds-copy:hover{background:rgba(255,255,255,0.18)}.ds-copy:active{background:var(--accent)}.ds-copy:focus-visible{outline:3px solid var(--accent);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Desk Under the Window",
+    "overview": "Stash's world is a warm sheet of paper with the Mac sitting on it. The canvas is paper with a faint ink dot grid; on it rest rebuilt macOS objects (windows with traffic lights, the paste menu, a menu bar drop-down, a terminal) and physical keycaps that press. The product is never photographed; it is rebuilt in HTML so it can be used, and that rebuilt chrome is the page's main material. A single teal does every job that means \"this one, now\": the caret, the selected row, the pressed key, the primary action.\n\nDensity is generous on paper and tight inside the windows. Display type is loud and compact (Montserrat 900 with -0.04em tracking), while everything inside a window speaks quietly in Inter at native UI sizes. One passage drops into ink, the privacy section, and nothing else does. The world was rebranded from an earlier indigo/violet with a clipboard-glyph icon to teal with the \"stack\" mark (three stacked rounded bars, the newest and brightest in front); the user rejected the purple and the clipboard glyph.\n\nThe same world skins the companion explainer film (`videos/stash-explainer/assets/stash.css`, `palette.css`) and the app's own UI (`src/styles.css`, `src/menu.css`). The landing page at `docs/` is the reference artifact; where they disagree, the site wins.",
+    "keyCharacteristics": [
+      "Warm paper canvas with an ink dot grid; white cards and cool-white macOS windows float on it.",
+      "One teal accent, with a deep variant for text and a translucent wash for soft states.",
+      "Rebuilt macOS window chrome as the primary material, never screenshots.",
+      "Keycaps with a hard base that dip and fill teal when pressed.",
+      "Lost things are struck through inside a dashed outline.",
+      "A single full-bleed ink band, reserved for privacy."
+    ],
+    "rules": [
+      {
+        "name": "The One Teal Rule",
+        "body": "Teal is the only accent hue. It marks selection, the caret, pressed keys and the primary action. The only other chromatic values allowed are the macOS traffic lights (part of the chrome), the search-mark yellow (search hits only), and lost red (the lost state only).",
+        "section": "colors"
+      },
+      {
+        "name": "The Cool Window, Warm Paper Rule",
+        "body": "Paper is warm (#f3f1ec family); the Mac's windows are cool white. Never tint a window warm or the page cool; the temperature split is how the eye tells product from page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is Machine Rule",
+        "body": "JetBrains Mono appears only for keycaps, code, file paths, timestamps and shortcut strings. Prose, labels and buttons are Inter; headings are Montserrat.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight Display Rule",
+        "body": "Every Montserrat 900 heading carries -0.04em tracking and line-height of 1 or less, with balanced wrapping. Body copy uses pretty wrapping.",
+        "section": "typography"
+      },
+      {
+        "name": "The Pressed Key Rule",
+        "body": "Keycaps, and the install step numerals drawn as keycaps, are the only objects with a hard zero-blur base. Pressing a key dips it 0.12em, collapses the base, and fills it teal. Every other surface uses the soft shadow vocabulary.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Dark Band Rule",
+        "body": "The privacy section is the only full-width ink passage. Dark islands elsewhere (the shell, the terminal target, the film frame) are dark because the real objects are, not as section treatments.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Lost Is Dashed Rule",
+        "body": "A dashed 1.5px outline plus a 2px strike-through means \"lost\" or \"not saved\": the buried address, the lost stack chip, the password that Stash refuses to keep. Do not use dashed outlines for anything else.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** keep teal the only accent; put it on whatever is selected, pressed, typed into, or the one primary action.",
+      "**Do** use deep teal, not base teal, when teal is text at small sizes.",
+      "**Do** rebuild the product as live HTML macOS chrome (46px titlebar, traffic lights, 18px radius, window white) instead of placing screenshots.",
+      "**Do** draw every shortcut as a keycap, and press it (dip, teal fill) when it is being demonstrated.",
+      "**Do** keep the paper warm and the windows cool.",
+      "**Do** use the stack mark (three stacked rounded bars on a teal square, newest and brightest in front) as the only brand image."
+    ],
+    "donts": [
+      "**Don't** use purple, indigo or violet anywhere; the user rejected them in the rebrand.",
+      "**Don't** use the clipboard glyph as the Stash logo or brand mark; it was replaced by the stack mark.",
+      "**Don't** add a second full-width dark section; the ink band belongs to privacy.",
+      "**Don't** give hard zero-blur shadows to anything except keycaps and keycap-style numerals.",
+      "**Don't** set prose, labels or buttons in JetBrains Mono.",
+      "**Don't** use dashed outlines or strike-through for anything except lost or refused copies."
+    ]
+  }
+}
