@@ -11,19 +11,19 @@
         #f4-head { font-size: 104px; }
         #f4-menu { left: 110px; top: 360px; }
         #f4-menu .m-item { color: var(--ui-fg); }
-        #f4-menu .slot { font-family: Inter, sans-serif; font-size: 17px; font-weight: 700; padding: 3px 9px; border-radius: 7px; background: rgba(91, 94, 240, 0.1); color: #3a3dc4; flex: none; display: block; }
+        #f4-menu .slot { font-family: Inter, sans-serif; font-size: 17px; font-weight: 700; padding: 3px 9px; border-radius: 7px; background: rgba(14, 116, 144, 0.1); color: #0b5d73; flex: none; display: block; }
         #f4-targets { position: absolute; left: 900px; top: 360px; width: 910px; display: flex; flex-direction: column; gap: 26px; }
         .tgt { position: relative; background: var(--ui-bg); border-radius: 18px; overflow: hidden; box-shadow: 0 0 0 1.5px rgba(22,22,40,.08), 0 24px 60px rgba(22,22,40,.16); font-family: Inter, sans-serif; color: var(--ui-fg); }
         .tgt .bar { height: 46px; display: flex; align-items: center; gap: 10px; padding: 0 18px; background: #efeff5; border-bottom: 1.5px solid var(--ui-line); font-size: 18px; font-weight: 700; color: var(--ui-muted); }
         .tgt .bar .lights i { width: 13px; height: 13px; }
         .tgt .fld { display: flex; align-items: center; gap: 16px; padding: 22px 26px; font-size: 30px; min-height: 90px; }
         .tgt .fld label { color: var(--ui-faint); font-weight: 700; font-size: 24px; width: 120px; flex: none; }
-        .tgt .val { background: rgba(99, 102, 241, 0.14); border-radius: 8px; padding: 0 8px; display: inline-block; }
+        .tgt .val { background: rgba(14, 116, 144, 0.14); border-radius: 8px; padding: 0 8px; display: inline-block; }
         .tgt.term { background: #17162b; color: #e6e6f5; }
         .tgt.term .bar { background: #222140; color: #9a9ac0; border-color: rgba(255,255,255,.08); }
         .tgt.term .fld { font-family: "JetBrains Mono", monospace; font-size: 28px; }
-        .tgt.term .val { background: rgba(165, 180, 252, 0.2); }
-        .tgt .ring { position: absolute; inset: 0; border-radius: 18px; border: 4px solid #5b5ef0; opacity: 0; pointer-events: none; }
+        .tgt.term .val { background: rgba(125, 211, 227, 0.2); }
+        .tgt .ring { position: absolute; inset: 0; border-radius: 18px; border: 4px solid #0e7490; opacity: 0; pointer-events: none; }
         #f4-num { overflow: hidden; }
         #f4-num .n { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2; }
       </style>
@@ -103,14 +103,14 @@
               tl.to(b.n, { yPercent: 0, duration: 0.2, ease: "power2.out" }, b.at - 0.15);
               const pb = beats[i - 1];
               tl.to(pb.ring, { opacity: 0, duration: 0.25 }, b.at);
-              tl.to(pb.row, { backgroundColor: "rgba(91,94,240,0)", duration: 0.25 }, b.at);
+              tl.to(pb.row, { backgroundColor: "rgba(14,116,144,0)", duration: 0.25 }, b.at);
             }
             press($("#f4-kc"), $("#f4-kc .on"), b.at, 0.5);
             press($("#f4-ko"), $("#f4-ko .on"), b.at + 0.03, 0.47);
             press($("#f4-num"), $("#f4-on"), b.at + 0.06, 0.44);
             tl.to("#f4-num", { color: "#ffffff", duration: 0.05 }, b.at + 0.06);
             tl.to("#f4-num", { color: "#16161d", duration: 0.25 }, b.at + 0.5);
-            tl.to(b.row, { backgroundColor: "rgba(91,94,240,0.07)", duration: 0.15 }, b.at + 0.06);
+            tl.to(b.row, { backgroundColor: "rgba(14,116,144,0.07)", duration: 0.15 }, b.at + 0.06);
             tl.to(b.slot, { keyframes: { scale: [1, 1.25, 1] }, duration: 0.35, ease: "power2.out" }, b.at + 0.06);
             tl.to(b.ring, { opacity: 1, duration: 0.15 }, b.at + 0.12);
             tl.fromTo(b.val, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, b.at + 0.14);

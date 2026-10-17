@@ -17,7 +17,7 @@
     { kind: "text", text: "Carrer de Mallorca 401, Barcelona", when: "1h" },
     { kind: "link", text: "github.com/HusDev/stash", when: "3h" },
     { kind: "mail", text: "hussein@example.com", when: "5h" },
-    { kind: "swatch", text: "#6366F1", when: "1d" },
+    { kind: "swatch", text: "#0E7490", when: "1d" },
   ];
   const demo = $(".hero-demo");
   const pm = $("#pm");
@@ -141,20 +141,16 @@
   );
   stations.forEach((s) => io.observe(s));
 
-  // ---------- reveals, once ----------
-  const revealables = document.querySelectorAll(".station, .film-frame, .menubar-demo, .close h2");
-  revealables.forEach((el) => el.setAttribute("data-reveal", ""));
-  const rio = new IntersectionObserver(
-    (entries) => entries.forEach((en) => {
-      if (en.isIntersecting) { en.target.classList.add("in"); rio.unobserve(en.target); }
-    }),
-    { rootMargin: "0px 0px -6% 0px" }
-  );
-  revealables.forEach((el) => rio.observe(el));
-  // Never leave content hidden: anything already scrolled past is shown.
-  const sweep = () => revealables.forEach((el) => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add("in"); });
-  addEventListener("scroll", sweep, { passive: true });
-  addEventListener("load", sweep);
+  // ---------- film: one authored play button, then native controls ----------
+  const film = $("#film");
+  const filmPlay = $("#film-play");
+  film.removeAttribute("controls");
+  filmPlay.hidden = false;
+  filmPlay.addEventListener("click", () => {
+    film.controls = true;
+    filmPlay.hidden = true;
+    film.play().catch(() => {});
+  });
 
   // ---------- copy buttons ----------
   document.querySelectorAll("[data-copy]").forEach((b) =>

@@ -6,9 +6,9 @@
   --faint: #9a9aa6;
   --line: rgba(0, 0, 0, 0.08);
   --hover: rgba(0, 0, 0, 0.04);
-  --sel: #5b5ef0;
+  --sel: #0e7490;
   --sel-fg: #fff;
-  --sel-soft: rgba(91, 94, 240, 0.12);
+  --sel-soft: rgba(14, 116, 144, 0.12);
   --mark: rgba(255, 196, 0, 0.45);
   --warn: #c2410c;
   --danger: #dc2626;
@@ -24,8 +24,8 @@
     --faint: #6c6c78;
     --line: rgba(255, 255, 255, 0.08);
     --hover: rgba(255, 255, 255, 0.05);
-    --sel: #6366f1;
-    --sel-soft: rgba(99, 102, 241, 0.2);
+    --sel: #0e8aa8;
+    --sel-soft: rgba(14, 116, 144, 0.2);
     --mark: rgba(255, 196, 0, 0.35);
     --warn: #fb923c;
     --danger: #f87171;
@@ -83,7 +83,7 @@ svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width:
 }
 .chip:hover { background: var(--hover); color: var(--fg); }
 .chip.on { background: var(--sel-soft); color: var(--sel); }
-@media (prefers-color-scheme: dark) { .chip.on { color: #a5b4fc; } }
+@media (prefers-color-scheme: dark) { .chip.on { color: #7dd3e3; } }
 .chip .n { font-size: 11px; opacity: 0.7; font-variant-numeric: tabular-nums; }
 
 /* Body */

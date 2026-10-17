@@ -11,14 +11,14 @@
         #f5-head { font-size: 112px; }
         #f5-head span { display: block; }
         #f5-win { left: 690px; top: 120px; width: 1140px; height: 840px; }
-        #f5-win .chip { color: var(--ui-muted); background-color: rgba(91, 94, 240, 0); }
+        #f5-win .chip { color: var(--ui-muted); background-color: rgba(14, 116, 144, 0); }
         #f5-win .chip.on { background: none; }
         .f5-layer { position: absolute; inset: 0; }
         #f5-listwrap, #f5-pvwrap { position: relative; height: 100%; }
         #f5-pvmain { position: relative; flex: 1; }
         #f5-pvmain .pv-main { position: absolute; inset: 0; }
         #f5-prose { font-family: Inter, sans-serif; font-size: 28px; white-space: normal; }
-        #f5-code { border: 3px solid rgba(91, 94, 240, 0); border-radius: 12px; margin: 14px; }
+        #f5-code { border: 3px solid rgba(14, 116, 144, 0); border-radius: 12px; margin: 14px; }
         #f5-qcaret { display: inline-block; width: 3px; height: 32px; background: var(--sel); vertical-align: -5px; margin-left: 2px; }
         #f5-q { flex: 0 1 auto; }
         #f5-edit { position: relative; }
@@ -94,8 +94,8 @@
             spans.forEach((s, i) => tl.set(s, { display: "inline" }, start + i * gap));
             return start + spans.length * gap;
           }
-          const ON = { backgroundColor: "rgba(91,94,240,0.12)", color: "#3a3dc4", duration: 0.15 };
-          const OFF = { backgroundColor: "rgba(91,94,240,0)", color: "#55555f", duration: 0.15 };
+          const ON = { backgroundColor: "rgba(14,116,144,0.12)", color: "#0b5d73", duration: 0.15 };
+          const OFF = { backgroundColor: "rgba(14,116,144,0)", color: "#55555f", duration: 0.15 };
 
           tl.fromTo("#f5-glow", { scale: 0.95 }, { scale: 1.1, duration: D, ease: "sine.inOut" }, 0);
           tl.fromTo("#f5-ghost", { x: 0 }, { x: 80, duration: D, ease: "none" }, 0);
@@ -121,9 +121,9 @@
 
           // "…and edit before you paste" Edit presses, Hello → Hey
           tl.fromTo("#f5-h3", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 5.6);
-          tl.to("#f5-edit", { scale: 0.92, backgroundColor: "#5b5ef0", color: "#ffffff", duration: 0.08 }, 5.85);
+          tl.to("#f5-edit", { scale: 0.92, backgroundColor: "#0e7490", color: "#ffffff", duration: 0.08 }, 5.85);
           tl.to("#f5-edit", { scale: 1, duration: 0.25, ease: "power3.out" }, 5.95);
-          tl.to("#f5-code", { borderColor: "rgba(91,94,240,1)", backgroundColor: "rgba(91,94,240,0.05)", duration: 0.2 }, 5.95);
+          tl.to("#f5-code", { borderColor: "rgba(14,116,144,1)", backgroundColor: "rgba(14,116,144,0.05)", duration: 0.2 }, 5.95);
           tl.set("#f5-w1", { display: "none" }, 6.35);
           tl.set("#f5-w2", { display: "inline" }, 6.6);
           tl.fromTo("#f5-w2", { backgroundColor: "rgba(255,196,0,0.6)" }, { backgroundColor: "rgba(255,196,0,0)", duration: 0.9 }, 6.6);

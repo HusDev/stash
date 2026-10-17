@@ -2,12 +2,12 @@
 :root { --canvas:#f3f1ec; --ink:#16161d; --ink-dim:#5d5d6b; }
 .scene { background: var(--canvas); }
 .dots { background-image: radial-gradient(rgba(22,22,40,.13) 1.6px, transparent 1.6px); }
-.glow, .glow.violet { background: radial-gradient(circle, rgba(91,94,240,.13) 0%, rgba(91,94,240,0) 68%); }
+.glow, .glow.violet { background: radial-gradient(circle, rgba(14,116,144,.13) 0%, rgba(14,116,144,0) 68%); }
 .ghost { color: rgba(22,22,40,.06); }
-.eyebrow { color: #4f52d9; }
+.eyebrow { color: #0b5d73; }
 .key { background: linear-gradient(180deg,#ffffff 0%,#ececf2 100%); border-color: rgba(22,22,40,.14); color:#16161d; box-shadow: 0 10px 0 #cfcfdb, 0 18px 36px rgba(22,22,40,.15); }
 .key.sm { box-shadow: 0 7px 0 #cfcfdb, 0 12px 26px rgba(22,22,40,.14); }
-.key.down { background: linear-gradient(180deg,#5b5ef0,#4b4ee0); color:#fff; border-color:#4b4ee0; box-shadow: 0 2px 0 #3638b0, 0 8px 18px rgba(22,22,40,.2); }
+.key.down { background: linear-gradient(180deg,#0e7490,#0c6782); color:#fff; border-color:#0c6782; box-shadow: 0 2px 0 #08495b, 0 8px 18px rgba(22,22,40,.2); }
 .plus { color: var(--ink-dim); }
 .win, .menu, .tgt { box-shadow: 0 0 0 1.5px rgba(22,22,40,.08), 0 30px 80px rgba(22,22,40,.18); }
 #f6-bar { background: rgba(22,22,40,.06) !important; color: var(--ink) !important; border-color: rgba(22,22,40,.1) !important; }

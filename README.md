@@ -2,6 +2,8 @@
 
 A keyboard-first clipboard manager for macOS, built with Tauri 2.
 
+**[Website](https://husdev.github.io/stash/)** · **[Download for macOS](https://github.com/HusDev/stash/releases/latest/download/Stash.dmg)** (Apple Silicon + Intel, macOS 11+) · MIT licensed
+
 [![Watch the 45-second demo](docs/stash-demo-poster.jpg)](docs/stash-demo.mp4)
 
 ▶ [Watch the 45-second demo (with sound)](docs/stash-demo.mp4). The video was made with [HyperFrames](https://hyperframes.heygen.com); its source is in [`videos/stash-explainer`](videos/stash-explainer).

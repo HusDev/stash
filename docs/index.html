@@ -7,7 +7,7 @@
   <meta name="description" content="Stash is a free, open-source clipboard manager for macOS. Press ⌘⇧V and your recent copies open at your text cursor. Press a number and it's pasted." />
   <meta property="og:title" content="Stash: everything you copy, right where you're typing" />
   <meta property="og:description" content="A keyboard-first clipboard manager for macOS. Free and open source." />
-  <meta property="og:image" content="https://husdev.github.io/stash/stash-demo-poster.jpg" />
+  <meta property="og:image" content="https://husdev.github.io/stash/stash-film-poster.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#f3f1ec" />
@@ -40,14 +40,14 @@
     <section class="hero" id="top">
       <div class="hero-demo" aria-label="Interactive demo of the Stash paste menu">
         <div class="lost" id="lost" aria-hidden="true">
-          <span class="lost-tag">copied 1h ago</span>
-          <span class="lost-text">Carrer de Mallorca 401, Barcelona<i class="strike"></i></span>
+          <span class="lost-tag">Copied 1h ago</span>
+          <span class="lost-text">Carrer de Mallorca 401, Barcelona</span>
         </div>
 
         <div class="win note" id="note">
           <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title">Message to landlord</span></div>
           <div class="note-body">
-            <div class="note-meta">To: maria@pisos.es</div>
+            <div class="note-meta">To: maria@example.es</div>
             <p>Hi María! Thanks for showing me the room.</p>
             <p class="note-line">My address is <span class="pasted" id="pasted" hidden></span><span class="caret" id="caret"></span></p>
           </div>
@@ -79,7 +79,7 @@
           </a>
           <a class="btn ghost" href="https://github.com/HusDev/stash">View source</a>
         </div>
-        <p class="fine">Free and open source (MIT) · macOS 11+ · Apple Silicon and Intel · about 6 MB</p>
+        <p class="fine">v0.1.0 · .dmg · about 6 MB · macOS 11+ on Apple Silicon and Intel · free and open source (MIT)</p>
       </div>
     </section>
 
@@ -176,10 +176,14 @@
     <section class="film" aria-label="Demo video">
       <h2>Watch it in 45 seconds.</h2>
       <div class="film-frame">
-        <video controls preload="none" playsinline poster="stash-demo-poster.jpg" width="1280" height="720">
+        <video id="film" controls preload="none" playsinline poster="stash-film-poster.jpg" width="1280" height="720">
           <source src="stash-demo.mp4" type="video/mp4" />
           <a href="stash-demo.mp4">Download the demo video (MP4)</a>
         </video>
+        <button class="film-play" id="film-play" type="button" hidden>
+          <span class="fp-disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+          <span class="fp-label">Play the demo <em>0:45 · sound on</em></span>
+        </button>
       </div>
     </section>
 
@@ -190,7 +194,7 @@
         <dl class="rules">
           <div>
             <dt>Passwords are never saved.</dt>
-            <dd>1Password, Bitwarden and other password managers mark what they copy as concealed. Stash sees that mark and skips the copy entirely.</dd>
+            <dd>Password managers like 1Password mark what they copy as concealed. Stash sees that mark and skips the copy entirely.</dd>
           </div>
           <div>
             <dt>Nothing leaves your Mac.</dt>
@@ -292,6 +296,7 @@
     <!-- Close -->
     <section class="close" aria-labelledby="close-h">
       <img src="stash-icon.png" alt="" width="112" height="112" />
+      <p class="ending" aria-hidden="true">My address is <span class="pasted-end">Carrer de Mallorca 401, Barcelona</span></p>
       <h2 id="close-h">Stop losing what you copied.</h2>
       <div class="cta">
         <a class="btn primary big" href="https://github.com/HusDev/stash/releases/latest/download/Stash.dmg">
