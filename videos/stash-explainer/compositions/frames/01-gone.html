@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="../../assets/stash.css" />
+      <link rel="stylesheet" href="../../assets/palette.css" />
+      <style>
+        #root { position: absolute; inset: 0; }
+        #f1-note { left: 110px; top: 300px; width: 1080px; height: 470px; }
+        #f1-right { position: absolute; left: 1290px; top: 250px; width: 540px; display: flex; flex-direction: column; gap: 30px; }
+        #f1-head { font-size: 150px; }
+        #f1-head span { display: inline-block; }
+        #f1-lost {
+          position: absolute; left: 520px; top: 200px; padding: 14px 24px; border-radius: 14px;
+          border: 2px dashed rgba(22, 22, 40, 0.25); font-family: Inter, sans-serif; font-size: 30px;
+          color: #3d3d47; display: flex; gap: 14px; align-items: center;
+        }
+        #f1-lost small { font-family: "JetBrains Mono", monospace; font-size: 18px; color: var(--ink-dim); letter-spacing: 0.08em; }
+        #f1-addr { position: relative; display: block; }
+        #f1-wrong { display: inline-block; }
+      </style>
+      <div data-hf-id="hf-ripa" id="root" data-composition-id="f1-gone" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-wua0" class="scene">
+          <div data-hf-id="hf-zx1w" class="dots"></div>
+          <div data-hf-id="hf-zbuc" id="f1-glow" class="glow" style="left:-300px; top:-360px; width:1300px; height:1300px"></div>
+          <div data-hf-id="hf-aen3" id="f1-ghost" class="ghost" aria-hidden="true" data-layout-allow-occlusion data-layout-allow-overflow style="left:980px; top:700px; font-size:420px">⌘V</div>
+
+          <div data-hf-id="hf-wr7s" id="f1-lost" aria-hidden="true"><small data-hf-id="hf-jwn8">COPIED 1H AGO</small><span data-hf-id="hf-1ug2" id="f1-addr">Carrer de Mallorca 401, Barcelona<span data-hf-id="hf-pjgl" id="f1-strike" class="strike"></span></span></div>
+
+          <div data-hf-id="hf-6swo" id="f1-note" class="win">
+            <div data-hf-id="hf-t179" class="titlebar"><div data-hf-id="hf-05r3" class="lights"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i></div><div data-hf-id="hf-vojf" class="win-title">Message to landlord</div></div>
+            <div data-hf-id="hf-gjvw" class="note">
+              <div data-hf-id="hf-ylha" class="meta">To: maria@pisos.es</div>
+              <p data-hf-id="hf-rbyc">Hi María! Thanks for showing me the room.</p>
+              <p data-hf-id="hf-q1an"><span data-hf-id="hf-5nnw" id="f1-type">My address is </span><span data-hf-id="hf-ldtn" id="f1-wrong" class="wrong">npm run tauri dev</span><span data-hf-id="hf-c6e1" id="f1-caret" class="caret"></span></p>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-3zgb" id="f1-right">
+            <div data-hf-id="hf-j093" id="f1-eyebrow" class="eyebrow">The last copy wins</div>
+            <h1 data-hf-id="hf-t98y" id="f1-head" class="headline"><span data-hf-id="hf-c75d" id="f1-w1">It's</span> <span data-hf-id="hf-qdbg" id="f1-w2">gone.</span></h1>
+            <div data-hf-id="hf-rgbw" class="keys"><div data-hf-id="hf-4dbj" id="f1-k1" class="key">⌘<span data-hf-id="hf-2nmq" class="on">⌘</span></div><div data-hf-id="hf-3pan" id="f1-plus" class="plus">+</div><div data-hf-id="hf-7vmg" id="f1-k2" class="key">V<span data-hf-id="hf-kavc" class="on">V</span></div></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const D = 5.6;
+          const tl = gsap.timeline({ paused: true });
+          const $ = (s) => document.querySelector(s);
+
+          // Seek-safe typing: each character is its own span, revealed by a tl.set.
+          function typeOn(el, start, gap) {
+            const text = el.textContent;
+            el.textContent = "";
+            const spans = [...text].map((ch) => {
+              const s = document.createElement("span");
+              s.textContent = ch;
+              s.style.display = "none";
+              el.appendChild(s);
+              return s;
+            });
+            spans.forEach((s, i) => tl.set(s, { display: "inline" }, start + i * gap));
+            return start + spans.length * gap;
+          }
+          function press(key, at, hold) {
+            tl.to(key, { y: 8, duration: 0.07, ease: "power1.in" }, at)
+              .to(key.querySelector(".on"), { opacity: 1, duration: 0.05 }, at)
+              .to(key, { y: 0, duration: 0.3, ease: "power3.out" }, at + 0.12)
+              .to(key.querySelector(".on"), { opacity: 0, duration: 0.3 }, at + hold);
+          }
+
+          // ambient
+          tl.fromTo("#f1-glow", { scale: 1 }, { scale: 1.12, duration: 2.8, yoyo: true, repeat: 1, ease: "sine.inOut" }, 0);
+          tl.fromTo("#f1-ghost", { x: 0 }, { x: -60, duration: D, ease: "none" }, 0);
+
+          // the note arrives
+          tl.fromTo("#f1-note", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.05);
+          tl.fromTo("#f1-lost", { y: -16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 0.35);
+
+          // "My address is " types on, then waits
+          const typed = typeOn($("#f1-type"), 0.75, 0.065);
+          tl.set("#f1-wrong", { display: "none" }, 0);
+
+          // caret blink while idle (deterministic sets)
+          for (let t = typed + 0.25; t < 3.3; t += 0.5) tl.set("#f1-caret", { opacity: Math.round((t - typed) / 0.5) % 2 ? 1 : 0 }, t);
+          tl.set("#f1-caret", { opacity: 1 }, 3.3);
+
+          // "…copied something else": the old address gets struck out
+          tl.fromTo("#f1-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power2.inOut" }, 2.3);
+
+          // ⌘V lands the wrong thing
+          tl.fromTo(["#f1-k1", "#f1-plus", "#f1-k2"], { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power3.out", stagger: 0.08 }, 2.75);
+          press($("#f1-k1"), 3.35, 1.4);
+          press($("#f1-k2"), 3.42, 1.33);
+          tl.set("#f1-wrong", { display: "inline-block" }, 3.5);
+          tl.fromTo("#f1-wrong", { x: 0 }, { keyframes: { x: [0, -10, 9, -6, 4, 0] }, duration: 0.42, ease: "none" }, 3.55);
+
+          // "…and now, it's gone."
+          tl.fromTo("#f1-eyebrow", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 3.55);
+          tl.fromTo("#f1-w1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.95);
+          tl.fromTo("#f1-w2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 4.3);
+          tl.to("#f1-lost", { y: -50, opacity: 0, filter: "blur(6px)", duration: 0.8, ease: "power2.in" }, 4.3);
+
+          // hand off
+          tl.to(["#f1-note", "#f1-right"], { opacity: 0, y: -16, duration: 0.3, ease: "power2.in" }, D - 0.32);
+
+          window.__timelines["f1-gone"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

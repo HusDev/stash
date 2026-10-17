@@ -2,6 +2,10 @@
 
 A keyboard-first clipboard manager for macOS, built with Tauri 2.
 
+[![Watch the 45-second demo](docs/stash-demo-poster.jpg)](docs/stash-demo.mp4)
+
+▶ [Watch the 45-second demo (with sound)](docs/stash-demo.mp4). The video was made with [HyperFrames](https://hyperframes.heygen.com); its source is in [`videos/stash-explainer`](videos/stash-explainer).
+
 Press **⌘⇧V** while typing anywhere. A small menu opens at your text cursor with your recent copies. Press **1–9** or **↵** to paste one. Normal **⌘V** still pastes as usual.
 
 For the full window (search, preview, edit, filters), click the menu bar icon or press **⌘O** in the menu.

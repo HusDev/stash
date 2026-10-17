@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="../../assets/stash.css" />
+      <link rel="stylesheet" href="../../assets/palette.css" />
+      <style>
+        #root { position: absolute; inset: 0; }
+        #f5-left { position: absolute; left: 110px; top: 250px; width: 520px; display: flex; flex-direction: column; gap: 28px; }
+        #f5-head { font-size: 112px; }
+        #f5-head span { display: block; }
+        #f5-win { left: 690px; top: 120px; width: 1140px; height: 840px; }
+        #f5-win .chip { color: var(--ui-muted); background-color: rgba(91, 94, 240, 0); }
+        #f5-win .chip.on { background: none; }
+        .f5-layer { position: absolute; inset: 0; }
+        #f5-listwrap, #f5-pvwrap { position: relative; height: 100%; }
+        #f5-pvmain { position: relative; flex: 1; }
+        #f5-pvmain .pv-main { position: absolute; inset: 0; }
+        #f5-prose { font-family: Inter, sans-serif; font-size: 28px; white-space: normal; }
+        #f5-code { border: 3px solid rgba(91, 94, 240, 0); border-radius: 12px; margin: 14px; }
+        #f5-qcaret { display: inline-block; width: 3px; height: 32px; background: var(--sel); vertical-align: -5px; margin-left: 2px; }
+        #f5-q { flex: 0 1 auto; }
+        #f5-edit { position: relative; }
+      </style>
+      <div data-hf-id="hf-9i5h" id="root" data-composition-id="f5-window" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-wua0" class="scene">
+          <div data-hf-id="hf-zx1w" class="dots"></div>
+          <div data-hf-id="hf-lv98" id="f5-glow" class="glow" style="left:600px; top:-160px; width:1400px; height:1400px"></div>
+          <div data-hf-id="hf-5s01" id="f5-ghost" class="ghost" aria-hidden="true" data-layout-allow-occlusion data-layout-allow-overflow style="left:-40px; top:770px; font-size:300px">history</div>
+
+          <div data-hf-id="hf-s360" id="f5-left">
+            <div data-hf-id="hf-0w1f" id="f5-eyebrow" class="eyebrow">Full history · ⌘O</div>
+            <h1 data-hf-id="hf-4w0m" id="f5-head" class="headline"><span data-hf-id="hf-7bvn" id="f5-h1">Search.</span><span data-hf-id="hf-csyg" id="f5-h2">Filter.</span><span data-hf-id="hf-tt6t" id="f5-h3">Edit.</span></h1>
+          </div>
+
+          <div data-hf-id="hf-0g2y" id="f5-win" class="win">
+            <div data-hf-id="hf-t179" class="titlebar"><div data-hf-id="hf-05r3" class="lights"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i></div><div data-hf-id="hf-fao0" class="win-title">Stash</div></div>
+            <div data-hf-id="hf-cyoh" class="full-top">
+              <div data-hf-id="hf-1hgc" class="full-search"><svg data-hf-id="hf-ulu9" viewBox="0 0 24 24"><circle data-hf-id="hf-r9ft" cx="11" cy="11" r="7"/><path data-hf-id="hf-8pe5" d="m20 20-3.5-3.5"/></svg><span data-hf-id="hf-5t9h" id="f5-q" class="typed">greet</span><span data-hf-id="hf-0z9g" id="f5-qcaret"></span></div>
+              <div data-hf-id="hf-exrd" class="chips">
+                <span data-hf-id="hf-bcdh" id="f5-c0" class="chip">All <i data-hf-id="hf-utlx">128</i></span><span data-hf-id="hf-33v5" class="chip">Pinned <i data-hf-id="hf-8bh9">3</i></span><span data-hf-id="hf-bikw" class="chip">Text <i data-hf-id="hf-hvi6">64</i></span>
+                <span data-hf-id="hf-n414" id="f5-c1" class="chip">Links <i data-hf-id="hf-xw0x">21</i></span><span data-hf-id="hf-ldfy" id="f5-c2" class="chip">Images <i data-hf-id="hf-cajj">9</i></span><span data-hf-id="hf-hwkk" id="f5-c3" class="chip">Code <i data-hf-id="hf-97fh">18</i></span><span data-hf-id="hf-khle" id="f5-c4" class="chip">Colors <i data-hf-id="hf-ab0e">6</i></span>
+              </div>
+            </div>
+            <div data-hf-id="hf-tbok" class="full-body">
+              <div data-hf-id="hf-haqo" class="full-list"><div data-hf-id="hf-402z" id="f5-listwrap">
+                <div data-hf-id="hf-vdpc" id="f5-all" class="f5-layer">
+                  <div data-hf-id="hf-peys" class="row sel"><span data-hf-id="hf-8dw9" class="ic"><svg data-hf-id="hf-1tol" viewBox="0 0 24 24"><path data-hf-id="hf-57qk" d="M4 6h16M4 12h16M4 18h10"/></svg></span><span data-hf-id="hf-hv1q" class="t">Carrer de Mallorca 401, Barcelona</span><span data-hf-id="hf-aioe" class="meta">now <kbd data-hf-id="hf-iftj">⌘1</kbd></span></div>
+                  <div data-hf-id="hf-thy4" class="row"><span data-hf-id="hf-hovh" class="ic"><svg data-hf-id="hf-30lo" viewBox="0 0 24 24"><path data-hf-id="hf-x96u" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span><span data-hf-id="hf-i24d" class="t">npm run tauri dev</span><span data-hf-id="hf-spgr" class="meta">2m <kbd data-hf-id="hf-i1ii">⌘2</kbd></span></div>
+                  <div data-hf-id="hf-lt04" class="row"><span data-hf-id="hf-ivsk" class="ic"><svg data-hf-id="hf-2man" viewBox="0 0 24 24"><path data-hf-id="hf-o563" d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path data-hf-id="hf-otez" d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span><span data-hf-id="hf-s8vl" class="t">github.com/HusDev/stash</span><span data-hf-id="hf-fkel" class="meta">3h <kbd data-hf-id="hf-hn7h">⌘3</kbd></span></div>
+                  <div data-hf-id="hf-km31" class="row"><span data-hf-id="hf-ihhj" class="ic"><svg data-hf-id="hf-3t7q" viewBox="0 0 24 24"><rect data-hf-id="hf-m05h" x="3" y="3" width="18" height="18" rx="2"/><circle data-hf-id="hf-ymtw" cx="9" cy="9" r="2"/><path data-hf-id="hf-tvh6" d="m21 15-5-5L5 21"/></svg></span><span data-hf-id="hf-bxku" class="t">Image · 1440×900</span><span data-hf-id="hf-4owy" class="meta">4h <kbd data-hf-id="hf-kfco">⌘4</kbd></span></div>
+                  <div data-hf-id="hf-l0e2" class="row"><span data-hf-id="hf-joem" class="ic"><svg data-hf-id="hf-3ewp" viewBox="0 0 24 24"><rect data-hf-id="hf-uwav" x="3" y="5" width="18" height="14" rx="2"/><path data-hf-id="hf-cwl6" d="m3 7 9 6 9-6"/></svg></span><span data-hf-id="hf-sjaf" class="t">hussein@example.com</span><span data-hf-id="hf-e12z" class="meta">5h <kbd data-hf-id="hf-k11n">⌘5</kbd></span></div>
+                  <div data-hf-id="hf-mzx7" class="row"><span data-hf-id="hf-ja3l" class="ic"><svg data-hf-id="hf-4lts" viewBox="0 0 24 24"><path data-hf-id="hf-turo" d="M4 6h16M4 12h16M4 18h10"/></svg></span><span data-hf-id="hf-qaap" class="t">Meeting notes: ship on Friday</span><span data-hf-id="hf-lvej" class="meta">1d <kbd data-hf-id="hf-jmqm">⌘6</kbd></span></div>
+                </div>
+                <div data-hf-id="hf-05cd" id="f5-hits" class="f5-layer">
+                  <div data-hf-id="hf-jc58" class="row sel"><span data-hf-id="hf-kh0o" class="ic"><svg data-hf-id="hf-47ir" viewBox="0 0 24 24"><path data-hf-id="hf-ajt6" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span><span data-hf-id="hf-nx8t" class="t">const <mark data-hf-id="hf-mwp5">greet</mark> = (name) =&gt; {</span><span data-hf-id="hf-0c74" class="meta">2d <kbd data-hf-id="hf-z447">⌘1</kbd></span></div>
+                  <div data-hf-id="hf-ne88" class="row"><span data-hf-id="hf-k2pn" class="ic"><svg data-hf-id="hf-z1je" viewBox="0 0 24 24"><path data-hf-id="hf-ay47" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span><span data-hf-id="hf-o902" class="t">def <mark data-hf-id="hf-scn1">greet</mark>(user):</span><span data-hf-id="hf-33ou" class="meta">4d <kbd data-hf-id="hf-8stq">⌘2</kbd></span></div>
+                  <div data-hf-id="hf-m7b5" class="row"><span data-hf-id="hf-l9mq" class="ic"><svg data-hf-id="hf-yn8d" viewBox="0 0 24 24"><path data-hf-id="hf-bcf8" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span><span data-hf-id="hf-naxq" class="t">expect(<mark data-hf-id="hf-tjk4">greet</mark>("Ana"))</span><span data-hf-id="hf-rtzy" class="meta">1w <kbd data-hf-id="hf-3nip">⌘3</kbd></span></div>
+                </div>
+              </div></div>
+              <div data-hf-id="hf-xu0e" class="pv">
+                <div data-hf-id="hf-mz8e" id="f5-pvmain">
+                  <div data-hf-id="hf-zewe" id="f5-prose" class="pv-main">Carrer de Mallorca 401, Barcelona</div>
+                  <div data-hf-id="hf-zcnd" id="f5-code" class="pv-main">const <mark data-hf-id="hf-t593">greet</mark> = (name) =&gt; {
+  return `<span data-hf-id="hf-e82u" id="f5-w1">Hello</span><span data-hf-id="hf-fpx9" id="f5-w2">Hey</span> ${name}`;
+};</div>
+                </div>
+                <div data-hf-id="hf-gdyz" class="pv-foot">
+                  <div data-hf-id="hf-rhep" class="stats"><span data-hf-id="hf-rblq"><b data-hf-id="hf-y7t8">54</b> chars</span><span data-hf-id="hf-1jzs"><b data-hf-id="hf-sc0y">3</b> lines</span><span data-hf-id="hf-7ra1">from <b data-hf-id="hf-mi5j">VS Code</b></span></div>
+                  <div data-hf-id="hf-s5hz" class="acts"><span data-hf-id="hf-m05z" class="btn primary">Paste ↵</span><span data-hf-id="hf-n8ha" class="btn">Copy</span><span data-hf-id="hf-3e6u" class="btn">Pin</span><span data-hf-id="hf-ianf" id="f5-edit" class="btn">Edit</span></div>
+                </div>
+              </div>
+            </div>
+            <div data-hf-id="hf-vyr6" class="full-hints"><span data-hf-id="hf-3v0s"><span data-hf-id="hf-bp6g" class="ui-kbd">↵</span>Paste</span><span data-hf-id="hf-ip68"><span data-hf-id="hf-bv19" class="ui-kbd">⌘P</span>Pin</span><span data-hf-id="hf-ge9h"><span data-hf-id="hf-7hny" class="ui-kbd">⌘E</span>Edit</span><span data-hf-id="hf-d2l2"><span data-hf-id="hf-j524" class="ui-kbd">⌘⌫</span>Delete</span><span data-hf-id="hf-9eoj"><span data-hf-id="hf-urvs" class="ui-kbd">⇥</span>Filter</span></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const D = 7.8;
+          const tl = gsap.timeline({ paused: true });
+          const $ = (s) => document.querySelector(s);
+          function typeOn(el, start, gap) {
+            const text = el.textContent;
+            el.textContent = "";
+            const spans = [...text].map((ch) => {
+              const s = document.createElement("span");
+              s.textContent = ch;
+              s.style.display = "none";
+              el.appendChild(s);
+              return s;
+            });
+            spans.forEach((s, i) => tl.set(s, { display: "inline" }, start + i * gap));
+            return start + spans.length * gap;
+          }
+          const ON = { backgroundColor: "rgba(91,94,240,0.12)", color: "#3a3dc4", duration: 0.15 };
+          const OFF = { backgroundColor: "rgba(91,94,240,0)", color: "#55555f", duration: 0.15 };
+
+          tl.fromTo("#f5-glow", { scale: 0.95 }, { scale: 1.1, duration: D, ease: "sine.inOut" }, 0);
+          tl.fromTo("#f5-ghost", { x: 0 }, { x: 80, duration: D, ease: "none" }, 0);
+
+          // "Need something older?" the full window floats in
+          tl.fromTo("#f5-win", { y: 70, scale: 0.94, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 0.05);
+          tl.fromTo("#f5-eyebrow", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.4);
+          tl.set("#f5-c0", ON, 0);
+          tl.set(["#f5-hits", "#f5-code"], { opacity: 0 }, 0);
+          tl.set("#f5-w2", { display: "none" }, 0);
+
+          // "Search everything." types greet; the list filters
+          tl.fromTo("#f5-h1", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.55);
+          const typed = typeOn($("#f5-q"), 1.75, 0.09);
+          tl.to(["#f5-all", "#f5-prose"], { opacity: 0, duration: 0.18 }, typed);
+          tl.fromTo("#f5-hits", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, typed + 0.05);
+          tl.to("#f5-code", { opacity: 1, duration: 0.25 }, typed + 0.05);
+
+          // "Filter links, images, code, or colors" chips step on each word
+          tl.fromTo("#f5-h2", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.9);
+          const steps = [["#f5-c0", "#f5-c1", 3.6], ["#f5-c1", "#f5-c2", 4.02], ["#f5-c2", "#f5-c3", 4.6], ["#f5-c3", "#f5-c4", 5.1], ["#f5-c4", "#f5-c3", 5.5]];
+          steps.forEach(([from, to, at]) => { tl.to(from, OFF, at); tl.to(to, ON, at); });
+
+          // "…and edit before you paste" Edit presses, Hello → Hey
+          tl.fromTo("#f5-h3", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 5.6);
+          tl.to("#f5-edit", { scale: 0.92, backgroundColor: "#5b5ef0", color: "#ffffff", duration: 0.08 }, 5.85);
+          tl.to("#f5-edit", { scale: 1, duration: 0.25, ease: "power3.out" }, 5.95);
+          tl.to("#f5-code", { borderColor: "rgba(91,94,240,1)", backgroundColor: "rgba(91,94,240,0.05)", duration: 0.2 }, 5.95);
+          tl.set("#f5-w1", { display: "none" }, 6.35);
+          tl.set("#f5-w2", { display: "inline" }, 6.6);
+          tl.fromTo("#f5-w2", { backgroundColor: "rgba(255,196,0,0.6)" }, { backgroundColor: "rgba(255,196,0,0)", duration: 0.9 }, 6.6);
+
+          tl.to(["#f5-win", "#f5-left"], { opacity: 0, y: -16, duration: 0.3, ease: "power2.in" }, D - 0.32);
+
+          window.__timelines["f5-window"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

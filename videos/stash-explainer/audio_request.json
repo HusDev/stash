@@ -1,0 +1,18 @@
+{
+  "provider": "kokoro",
+  "lang": "en",
+  "speed": 1.0,
+  "lines": [
+    { "id": "01", "text": "You copied it an hour ago. Then you copied something else. And now, it's gone.", "sfx": ["typing", "key-press", "error"] },
+    { "id": "02", "text": "Meet Stash. Everything you copy, right where you're typing.", "sfx": ["impact-bass-1", "sparkle"] },
+    { "id": "03", "text": "Press Command Shift V, and a menu opens at your cursor, with your recent copies. Hit a number, and it's pasted.", "sfx": ["key-press", "pop", "click"] },
+    { "id": "04", "text": "Pin the things you type all the time. Control Option one pastes your first pin, anywhere, without opening a thing.", "sfx": ["key-press", "whoosh-short", "pop"] },
+    { "id": "05", "text": "Need something older? Search everything. Filter links, images, code, or colors, and edit before you paste.", "sfx": ["typing", "click-soft"] },
+    { "id": "06", "text": "Passwords from your password manager are never saved. And it lives quietly, in your menu bar.", "sfx": ["error", "notification"] },
+    { "id": "07", "text": "Stash. Free and open source, on GitHub.", "sfx": ["impact-bass-1", "chime"] }
+  ],
+  "bgm": {
+    "mode": "generate",
+    "prompt": "calm modern electronic underscore, soft warm synth pads, light plucked arpeggio, gentle pulse, uplifting minimal tech product video, no vocals, 104 BPM, major key"
+  }
+}

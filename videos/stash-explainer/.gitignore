@@ -1,0 +1,8 @@
+node_modules/
+.hyperframes/
+renders/
+assets/bgm/track.wav
+assets/bgm/*.log
+.waveform-cache/
+.thumbnails/
+.media/

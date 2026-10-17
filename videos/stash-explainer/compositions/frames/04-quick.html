@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="../../assets/stash.css" />
+      <link rel="stylesheet" href="../../assets/palette.css" />
+      <style>
+        #root { position: absolute; inset: 0; }
+        #f4-top { position: absolute; left: 110px; top: 80px; right: 110px; display: flex; justify-content: space-between; align-items: flex-end; }
+        #f4-head { font-size: 104px; }
+        #f4-menu { left: 110px; top: 360px; }
+        #f4-menu .m-item { color: var(--ui-fg); }
+        #f4-menu .slot { font-family: Inter, sans-serif; font-size: 17px; font-weight: 700; padding: 3px 9px; border-radius: 7px; background: rgba(91, 94, 240, 0.1); color: #3a3dc4; flex: none; display: block; }
+        #f4-targets { position: absolute; left: 900px; top: 360px; width: 910px; display: flex; flex-direction: column; gap: 26px; }
+        .tgt { position: relative; background: var(--ui-bg); border-radius: 18px; overflow: hidden; box-shadow: 0 0 0 1.5px rgba(22,22,40,.08), 0 24px 60px rgba(22,22,40,.16); font-family: Inter, sans-serif; color: var(--ui-fg); }
+        .tgt .bar { height: 46px; display: flex; align-items: center; gap: 10px; padding: 0 18px; background: #efeff5; border-bottom: 1.5px solid var(--ui-line); font-size: 18px; font-weight: 700; color: var(--ui-muted); }
+        .tgt .bar .lights i { width: 13px; height: 13px; }
+        .tgt .fld { display: flex; align-items: center; gap: 16px; padding: 22px 26px; font-size: 30px; min-height: 90px; }
+        .tgt .fld label { color: var(--ui-faint); font-weight: 700; font-size: 24px; width: 120px; flex: none; }
+        .tgt .val { background: rgba(99, 102, 241, 0.14); border-radius: 8px; padding: 0 8px; display: inline-block; }
+        .tgt.term { background: #17162b; color: #e6e6f5; }
+        .tgt.term .bar { background: #222140; color: #9a9ac0; border-color: rgba(255,255,255,.08); }
+        .tgt.term .fld { font-family: "JetBrains Mono", monospace; font-size: 28px; }
+        .tgt.term .val { background: rgba(165, 180, 252, 0.2); }
+        .tgt .ring { position: absolute; inset: 0; border-radius: 18px; border: 4px solid #5b5ef0; opacity: 0; pointer-events: none; }
+        #f4-num { overflow: hidden; }
+        #f4-num .n { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2; }
+      </style>
+      <div data-hf-id="hf-02qr" id="root" data-composition-id="f4-quick" data-width="1920" data-height="1080">
+        <div data-hf-id="hf-wua0" class="scene">
+          <div data-hf-id="hf-zx1w" class="dots"></div>
+          <div data-hf-id="hf-cqti" id="f4-glow" class="glow violet" style="left:-260px; top:380px; width:1000px; height:1000px"></div>
+          <div data-hf-id="hf-wxxf" id="f4-glow2" class="glow" style="left:1100px; top:-300px; width:1000px; height:1000px"></div>
+
+          <div data-hf-id="hf-jv2p" id="f4-top">
+            <div data-hf-id="hf-yeow">
+              <div data-hf-id="hf-c3ol" id="f4-eyebrow" class="eyebrow">Quick paste</div>
+              <h1 data-hf-id="hf-3ywq" id="f4-head" class="headline">Pinned. Anywhere.</h1>
+            </div>
+            <div data-hf-id="hf-rgbw" class="keys">
+              <div data-hf-id="hf-z66l" id="f4-kc" class="key">⌃<span data-hf-id="hf-68dz" class="on">⌃</span></div>
+              <div data-hf-id="hf-gfcv" id="f4-ko" class="key">⌥<span data-hf-id="hf-ub75" class="on">⌥</span></div>
+              <div data-hf-id="hf-izyq" id="f4-num" class="key"><span data-hf-id="hf-v5tw" id="f4-n1" class="n">1</span><span data-hf-id="hf-pp8d" id="f4-n2" class="n" data-layout-allow-overflow>2</span><span data-hf-id="hf-7srp" id="f4-n3" class="n" data-layout-allow-overflow>3</span>&nbsp;<span data-hf-id="hf-vqj0" class="on" id="f4-on">&nbsp;</span></div>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-ymjn" id="f4-menu" class="menu">
+            <div data-hf-id="hf-iozu" class="m-search">
+              <span data-hf-id="hf-2if6" class="q">Pinned snippets</span>
+              <div data-hf-id="hf-bkd2" class="m-tabs"><b data-hf-id="hf-w34u">Recent</b><b data-hf-id="hf-h9dg" class="on">Pinned</b></div>
+            </div>
+            <div data-hf-id="hf-3htq" class="m-list">
+              <div data-hf-id="hf-5vb7" id="f4-r1" class="m-item"><span data-hf-id="hf-8dw9" class="ic"><svg data-hf-id="hf-ulu9" viewBox="0 0 24 24"><rect data-hf-id="hf-uwav" x="3" y="5" width="18" height="14" rx="2"/><path data-hf-id="hf-cwl6" d="m3 7 9 6 9-6"/></svg></span><span data-hf-id="hf-sjaf" class="t">hussein@example.com</span><span data-hf-id="hf-001l" id="f4-s1" class="slot">⌃⌥1</span></div>
+              <div data-hf-id="hf-x7fc" id="f4-r2" class="m-item"><span data-hf-id="hf-hovh" class="ic"><svg data-hf-id="hf-1tol" viewBox="0 0 24 24"><path data-hf-id="hf-57qk" d="M4 6h16M4 12h16M4 18h10"/></svg></span><span data-hf-id="hf-aynl" class="t">Carrer de Mallorca 401</span><span data-hf-id="hf-kt75" id="f4-s2" class="slot">⌃⌥2</span></div>
+              <div data-hf-id="hf-xz35" id="f4-r3" class="m-item"><span data-hf-id="hf-ivsk" class="ic"><svg data-hf-id="hf-30lo" viewBox="0 0 24 24"><path data-hf-id="hf-x96u" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span><span data-hf-id="hf-78ye" class="t">ssh deploy@stash.dev</span><span data-hf-id="hf-3mct" id="f4-s3" class="slot">⌃⌥3</span></div>
+            </div>
+          </div>
+
+          <div data-hf-id="hf-4qsi" id="f4-targets">
+            <div data-hf-id="hf-wglr" id="f4-t1" class="tgt"><div data-hf-id="hf-ofct" class="bar"><div data-hf-id="hf-05r3" class="lights"><i data-hf-id="hf-wt6k"></i><i data-hf-id="hf-zeb8"></i><i data-hf-id="hf-y7e5"></i></div>Mail — New Message</div><div data-hf-id="hf-yo4e" class="fld"><label data-hf-id="hf-myi4">To</label><span data-hf-id="hf-pibi" id="f4-v1" class="val">hussein@example.com</span></div><div data-hf-id="hf-0u0j" id="f4-g1" class="ring"></div></div>
+            <div data-hf-id="hf-nspw" id="f4-t2" class="tgt"><div data-hf-id="hf-q4y6" class="bar"><div data-hf-id="hf-uie7" class="lights"><i data-hf-id="hf-ylp6"></i><i data-hf-id="hf-0l8b"></i><i data-hf-id="hf-0zjc"></i></div>idealista.com — Contact form</div><div data-hf-id="hf-9w8y" class="fld"><label data-hf-id="hf-krln">Address</label><span data-hf-id="hf-arxd" id="f4-v2" class="val">Carrer de Mallorca 401</span></div><div data-hf-id="hf-s64o" id="f4-g2" class="ring"></div></div>
+            <div data-hf-id="hf-79z1" id="f4-t3" class="tgt term"><div data-hf-id="hf-s9py" class="bar"><div data-hf-id="hf-u436" class="lights"><i data-hf-id="hf-zsm9"></i><i data-hf-id="hf-06xa"></i><i data-hf-id="hf-26gf"></i></div>Terminal — zsh</div><div data-hf-id="hf-wp1q" class="fld">$ <span data-hf-id="hf-x5d3" id="f4-v3" class="val">ssh deploy@stash.dev</span></div><div data-hf-id="hf-sxsh" id="f4-g3" class="ring"></div></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const D = 8.0;
+          const tl = gsap.timeline({ paused: true });
+          const $ = (s) => document.querySelector(s);
+          function press(key, on, at, hold) {
+            tl.to(key, { y: 8, duration: 0.07, ease: "power1.in" }, at)
+              .to(on, { opacity: 1, duration: 0.05 }, at)
+              .to(key, { y: 0, duration: 0.3, ease: "power3.out" }, at + 0.12)
+              .to(on, { opacity: 0, duration: 0.25 }, at + hold);
+          }
+
+          tl.fromTo("#f4-glow", { scale: 1 }, { scale: 1.15, duration: D / 2, yoyo: true, repeat: 1, ease: "sine.inOut" }, 0);
+          tl.fromTo("#f4-glow2", { x: 0 }, { x: -70, duration: D, ease: "sine.inOut" }, 0);
+
+          // "Pin the things you type all the time."
+          tl.fromTo("#f4-eyebrow", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.1);
+          tl.fromTo("#f4-head", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 0.25);
+          tl.fromTo("#f4-menu", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 0.45);
+          tl.fromTo(["#f4-r1", "#f4-r2", "#f4-r3"], { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.3, stagger: 0.09, ease: "power2.out" }, 0.65);
+          tl.fromTo(["#f4-s1", "#f4-s2", "#f4-s3"], { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, stagger: 0.18, ease: "power3.out" }, 1.25);
+          tl.fromTo(["#f4-t1", "#f4-t2", "#f4-t3"], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.5, stagger: 0.1, ease: "power3.out" }, 1.5);
+          tl.set(["#f4-v1", "#f4-v2", "#f4-v3"], { opacity: 0 }, 0);
+
+          // the ⌃⌥ anchor arrives and never moves; only the number cycles
+          tl.fromTo(["#f4-kc", "#f4-ko", "#f4-num"], { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, stagger: 0.08, ease: "power3.out" }, 2.6);
+          tl.set(["#f4-n2", "#f4-n3"], { yPercent: 100 }, 0);
+
+          const beats = [
+            { at: 3.55, n: "#f4-n1", prev: null, row: "#f4-r1", slot: "#f4-s1", ring: "#f4-g1", val: "#f4-v1" },
+            { at: 4.85, n: "#f4-n2", prev: "#f4-n1", row: "#f4-r2", slot: "#f4-s2", ring: "#f4-g2", val: "#f4-v2" },
+            { at: 5.95, n: "#f4-n3", prev: "#f4-n2", row: "#f4-r3", slot: "#f4-s3", ring: "#f4-g3", val: "#f4-v3" },
+          ];
+          beats.forEach((b, i) => {
+            if (b.prev) {
+              tl.to(b.prev, { yPercent: -100, duration: 0.18, ease: "power2.in" }, b.at - 0.3);
+              tl.to(b.n, { yPercent: 0, duration: 0.2, ease: "power2.out" }, b.at - 0.15);
+              const pb = beats[i - 1];
+              tl.to(pb.ring, { opacity: 0, duration: 0.25 }, b.at);
+              tl.to(pb.row, { backgroundColor: "rgba(91,94,240,0)", duration: 0.25 }, b.at);
+            }
+            press($("#f4-kc"), $("#f4-kc .on"), b.at, 0.5);
+            press($("#f4-ko"), $("#f4-ko .on"), b.at + 0.03, 0.47);
+            press($("#f4-num"), $("#f4-on"), b.at + 0.06, 0.44);
+            tl.to("#f4-num", { color: "#ffffff", duration: 0.05 }, b.at + 0.06);
+            tl.to("#f4-num", { color: "#16161d", duration: 0.25 }, b.at + 0.5);
+            tl.to(b.row, { backgroundColor: "rgba(91,94,240,0.07)", duration: 0.15 }, b.at + 0.06);
+            tl.to(b.slot, { keyframes: { scale: [1, 1.25, 1] }, duration: 0.35, ease: "power2.out" }, b.at + 0.06);
+            tl.to(b.ring, { opacity: 1, duration: 0.15 }, b.at + 0.12);
+            tl.fromTo(b.val, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, b.at + 0.14);
+          });
+
+          tl.to(["#f4-top", "#f4-menu", "#f4-targets"], { opacity: 0, y: -16, duration: 0.3, ease: "power2.in" }, D - 0.32);
+
+          window.__timelines["f4-quick"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
