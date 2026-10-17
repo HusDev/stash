@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stash Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+  <div class="menu">
+    <div class="m-search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="mq" type="text" placeholder="Type to search · 1–9 to paste" autocomplete="off" spellcheck="false" />
+      <div class="m-tabs" id="tabs">
+        <button data-t="recent" class="on">Recent</button>
+        <button data-t="pinned">Pinned</button>
+      </div>
+    </div>
+    <ul id="mlist" class="m-list" role="listbox"></ul>
+    <footer class="m-foot">
+      <span><kbd>↵</kbd>Paste</span>
+      <span><kbd>⇧↵</kbd>Copy</span>
+      <span><kbd>⇥</kbd>Pinned</span>
+      <span class="grow"></span>
+      <button id="full" class="m-link">Open Stash <kbd>⌘O</kbd></button>
+    </footer>
+  </div>
+  <script src="shared.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

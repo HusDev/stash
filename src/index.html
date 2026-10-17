@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stash</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="search">
+        <svg viewBox="0 0 24 24" class="search-icon"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="text" placeholder="Search clipboard…" autocomplete="off" spellcheck="false" />
+        <span id="paused-badge" class="badge warn" hidden>Paused</span>
+        <button id="settings-btn" class="icon-btn" title="Settings (⌘,)">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        </button>
+      </div>
+      <nav id="filters" class="filters"></nav>
+    </header>
+
+    <main class="body">
+      <ul id="list" class="list" role="listbox"></ul>
+      <section id="preview" class="preview"></section>
+    </main>
+
+    <footer class="hints">
+      <span><kbd>↵</kbd> Paste</span>
+      <span><kbd>⇧↵</kbd> Copy</span>
+      <span><kbd>⌘1–9</kbd> Quick paste</span>
+      <span><kbd>⌘P</kbd> Pin</span>
+      <span><kbd>⌘E</kbd> Edit</span>
+      <span><kbd>⌘⌫</kbd> Delete</span>
+      <span><kbd>⇥</kbd> Filter</span>
+      <span class="grow"></span>
+      <span id="count" class="muted"></span>
+    </footer>
+
+    <div id="settings" class="settings" hidden>
+      <div class="settings-card">
+        <div class="settings-head">
+          <h2>Settings</h2>
+          <button id="settings-close" class="icon-btn" title="Close (Esc)">
+            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+
+        <label class="row">
+          <div>
+            <div class="row-title">Paste menu shortcut</div>
+            <div class="row-sub">Opens the paste menu at your text cursor. Click to change.</div>
+          </div>
+          <button id="hotkey" class="hotkey"></button>
+        </label>
+
+        <label class="row">
+          <div>
+            <div class="row-title">Paste directly</div>
+            <div class="row-sub">Enter pastes into the app you were using. Needs Accessibility access.
+              <a href="#" id="open-ax">Open settings</a></div>
+          </div>
+          <input type="checkbox" id="auto-paste" class="switch" />
+        </label>
+
+        <label class="row">
+          <div>
+            <div class="row-title">Paste shortcuts</div>
+            <div class="row-sub">Paste without opening Stash: <kbd>⌃⌥1–9</kbd> pinned items in pin order,
+              <kbd>⌃⌥V</kbd> the copy before your current one</div>
+          </div>
+          <input type="checkbox" id="quick-paste" class="switch" />
+        </label>
+
+        <label class="row">
+          <div>
+            <div class="row-title">Pause capture</div>
+            <div class="row-sub">Stop saving new copies. Passwords from password managers are never saved.</div>
+          </div>
+          <input type="checkbox" id="paused" class="switch" />
+        </label>
+
+        <label class="row">
+          <div>
+            <div class="row-title">Keep history</div>
+            <div class="row-sub">Pinned items are always kept</div>
+          </div>
+          <select id="max-items">
+            <option value="50">50 items</option>
+            <option value="100">100 items</option>
+            <option value="300">300 items</option>
+            <option value="1000">1,000 items</option>
+            <option value="5000">5,000 items</option>
+          </select>
+        </label>
+
+        <div class="row">
+          <div>
+            <div class="row-title">Clear history</div>
+            <div class="row-sub">Removes everything except pinned items</div>
+          </div>
+          <button id="clear" class="danger">Clear…</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
