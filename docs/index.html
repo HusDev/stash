@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stash: everything you copy, right where you're typing</title>
+  <meta name="description" content="Stash is a free, open-source clipboard manager for macOS. Press ⌘⇧V and your recent copies open at your text cursor. Press a number and it's pasted." />
+  <meta property="og:title" content="Stash: everything you copy, right where you're typing" />
+  <meta property="og:description" content="A keyboard-first clipboard manager for macOS. Free and open source." />
+  <meta property="og:image" content="https://husdev.github.io/stash/stash-demo-poster.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#f3f1ec" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preload" href="fonts/montserrat-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Stash home">
+      <img src="stash-icon.png" alt="" width="36" height="36" />
+      <span>Stash</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#story">How it works</a>
+      <a href="#shortcuts">Shortcuts</a>
+      <a href="#install">Install</a>
+      <a class="nav-gh" href="https://github.com/HusDev/stash">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: the paste menu, working -->
+    <section class="hero" id="top">
+      <div class="hero-demo" aria-label="Interactive demo of the Stash paste menu">
+        <div class="lost" id="lost" aria-hidden="true">
+          <span class="lost-tag">copied 1h ago</span>
+          <span class="lost-text">Carrer de Mallorca 401, Barcelona<i class="strike"></i></span>
+        </div>
+
+        <div class="win note" id="note">
+          <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title">Message to landlord</span></div>
+          <div class="note-body">
+            <div class="note-meta">To: maria@pisos.es</div>
+            <p>Hi María! Thanks for showing me the room.</p>
+            <p class="note-line">My address is <span class="pasted" id="pasted" hidden></span><span class="caret" id="caret"></span></p>
+          </div>
+
+          <div class="pm" id="pm" role="listbox" aria-label="Stash paste menu" data-open="true">
+            <div class="pm-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <span>Type to search · 1–9 to paste</span>
+              <span class="pm-tabs"><b class="on">Recent</b><b>Pinned</b></span>
+            </div>
+            <ul class="pm-list" id="pm-list"></ul>
+            <div class="pm-foot"><span><kbd>↵</kbd>Paste</span><span><kbd>⇧↵</kbd>Copy</span><span><kbd>⇥</kbd>Pinned</span></div>
+          </div>
+        </div>
+
+        <p class="demo-hint" id="demo-hint" aria-live="polite">
+          <span class="hint-dot"></span><span id="hint-text">Try it: press <kbd class="k">⌘</kbd><kbd class="k">⇧</kbd><kbd class="k">V</kbd>, then a number.</span>
+          <button class="hint-reset" id="reset" type="button" hidden>Again</button>
+        </p>
+      </div>
+
+      <div class="hero-copy">
+        <h1>Everything you copy, right where you're typing.</h1>
+        <p class="lede">Stash keeps your clipboard history and opens it at your text cursor. Press <kbd class="k sm">⌘</kbd><kbd class="k sm">⇧</kbd><kbd class="k sm">V</kbd>, pick a number, done. Your normal <kbd class="k sm">⌘</kbd><kbd class="k sm">V</kbd> still works exactly as before.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/HusDev/stash/releases/latest/download/Stash.dmg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+            Download for macOS
+          </a>
+          <a class="btn ghost" href="https://github.com/HusDev/stash">View source</a>
+        </div>
+        <p class="fine">Free and open source (MIT) · macOS 11+ · Apple Silicon and Intel · about 6 MB</p>
+      </div>
+    </section>
+
+    <!-- The story: one copy, followed -->
+    <section class="story" id="story" aria-label="How Stash works">
+      <h2 class="story-title">Follow one copy.</h2>
+
+      <div class="story-grid">
+        <aside class="tracker" aria-hidden="true">
+          <div class="tracker-card" id="tracker">
+            <div class="tc-row">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+              <span class="tc-text">Carrer de Mallorca 401, Barcelona</span>
+            </div>
+            <div class="tc-state" id="tc-state">Buried under newer copies</div>
+            <ol class="tc-steps">
+              <li class="on">Lost</li><li>Found</li><li>Pinned</li><li>Searched</li>
+            </ol>
+          </div>
+        </aside>
+
+        <div class="stations">
+          <article class="station" data-state="Buried under newer copies" data-step="0">
+            <h3>Copied, then buried.</h3>
+            <p>You copied an address an hour ago. Since then you copied a terminal command, a link and an email. macOS kept only the last one.</p>
+            <div class="stack" aria-hidden="true">
+              <div class="chip"><span class="ci code"></span>npm run tauri dev<em>now</em></div>
+              <div class="chip"><span class="ci link"></span>github.com/HusDev/stash<em>12m</em></div>
+              <div class="chip"><span class="ci mail"></span>hussein@example.com<em>40m</em></div>
+              <div class="chip is-lost"><span class="ci text"></span>Carrer de Mallorca 401, Barcelona<em>1h</em></div>
+            </div>
+            <p class="aside">Stash saves every copy: text, links, code, colors and images, with the app it came from.</p>
+          </article>
+
+          <article class="station" data-state="Found at your cursor" data-step="1">
+            <h3>Found at your cursor.</h3>
+            <p>Press <kbd class="k sm">⌘</kbd><kbd class="k sm">⇧</kbd><kbd class="k sm">V</kbd> in any app. The menu opens under the line you're typing, not in some window across the screen. Press <kbd class="k sm">2</kbd> and the address is pasted.</p>
+            <div class="bigkeys" aria-hidden="true"><kbd class="k">⌘</kbd><kbd class="k">⇧</kbd><kbd class="k">V</kbd><span class="then">then</span><kbd class="k down">2</kbd></div>
+            <ul class="facts">
+              <li><b>1–9</b> pastes instantly. Arrows and <kbd class="k sm">↵</kbd> work too.</li>
+              <li><b>Type</b> to search everything you've copied.</li>
+              <li><b>⇧↵</b> copies without pasting, when you want to decide later.</li>
+            </ul>
+          </article>
+
+          <article class="station" data-state="Pinned to ⌃⌥2" data-step="2">
+            <h3>Pinned to a key.</h3>
+            <p>Some things you type every week: your email, your address, a server login. Pin them with <kbd class="k sm">⌘</kbd><kbd class="k sm">P</kbd>. Each pin gets a slot, and <kbd class="k sm">⌃</kbd><kbd class="k sm">⌥</kbd><kbd class="k sm">2</kbd> pastes it from anywhere, without opening anything.</p>
+            <div class="pins" aria-hidden="true">
+              <div class="pins-list">
+                <div class="pin-row"><span class="ci mail"></span>hussein@example.com<b>⌃⌥1</b></div>
+                <div class="pin-row on"><span class="ci text"></span>Carrer de Mallorca 401<b>⌃⌥2</b></div>
+                <div class="pin-row"><span class="ci code"></span>ssh deploy@stash.dev<b>⌃⌥3</b></div>
+              </div>
+              <div class="targets">
+                <div class="tgt"><span class="tgt-app">Mail</span><span class="tgt-l">To</span><span class="val">hussein@example.com</span></div>
+                <div class="tgt on"><span class="tgt-app">Web form</span><span class="tgt-l">Address</span><span class="val">Carrer de Mallorca 401</span></div>
+                <div class="tgt term"><span class="tgt-app">Terminal</span><span class="tgt-l">$</span><span class="val">ssh deploy@stash.dev</span></div>
+              </div>
+            </div>
+            <p class="aside"><kbd class="k sm">⌃</kbd><kbd class="k sm">⌥</kbd><kbd class="k sm">V</kbd> pastes the copy before your current one. Press it again to switch back.</p>
+          </article>
+
+          <article class="station" data-state="Found again in search" data-step="3">
+            <h3>Searchable weeks later.</h3>
+            <p>The full window holds your whole history. Search across all of it, filter by kind, preview before pasting, and fix a typo with <kbd class="k sm">⌘</kbd><kbd class="k sm">E</kbd> first.</p>
+            <div class="win full" aria-hidden="true">
+              <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="win-title">Stash</span></div>
+              <div class="fw-search">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <span>mallorca</span><i class="fw-caret"></i>
+              </div>
+              <div class="fw-chips"><span class="on">All 128</span><span>Pinned 3</span><span>Text 64</span><span>Links 21</span><span>Images 9</span><span>Code 18</span><span>Colors 6</span></div>
+              <div class="fw-body">
+                <div class="fw-list">
+                  <div class="fw-row sel"><span class="ci text"></span><span>Carrer de <mark>Mallorca</mark> 401, Barcelona</span><em>3w</em></div>
+                  <div class="fw-row"><span class="ci link"></span><span>maps.app/…/<mark>mallorca</mark>-401</span><em>3w</em></div>
+                  <div class="fw-row"><span class="ci text"></span><span>Flight to Palma de <mark>Mallorca</mark></span><em>2mo</em></div>
+                </div>
+                <div class="fw-pv">
+                  <p class="fw-text">Carrer de <mark>Mallorca</mark> 401, Barcelona</p>
+                  <p class="fw-stats"><span><b>33</b> chars</span><span>from <b>Safari</b></span><span>used <b>4×</b></span></p>
+                  <p class="fw-acts"><span class="fb primary">Paste ↵</span><span class="fb">Copy</span><span class="fb">Pin</span><span class="fb">Edit</span></p>
+                </div>
+              </div>
+            </div>
+            <p class="aside">Deleted something by mistake? <kbd class="k sm">⌘</kbd><kbd class="k sm">Z</kbd> brings it back.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Film -->
+    <section class="film" aria-label="Demo video">
+      <h2>Watch it in 45 seconds.</h2>
+      <div class="film-frame">
+        <video controls preload="none" playsinline poster="stash-demo-poster.jpg" width="1280" height="720">
+          <source src="stash-demo.mp4" type="video/mp4" />
+          <a href="stash-demo.mp4">Download the demo video (MP4)</a>
+        </video>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="private" aria-labelledby="private-h">
+      <div class="private-copy">
+        <h2 id="private-h">Your secrets stay secret.</h2>
+        <dl class="rules">
+          <div>
+            <dt>Passwords are never saved.</dt>
+            <dd>1Password, Bitwarden and other password managers mark what they copy as concealed. Stash sees that mark and skips the copy entirely.</dd>
+          </div>
+          <div>
+            <dt>Nothing leaves your Mac.</dt>
+            <dd>History lives in a local file in <code>~/Library/Application Support</code>. No account, no sync, no analytics.</dd>
+          </div>
+          <div>
+            <dt>Pause any time.</dt>
+            <dd>Sharing your screen or handling something sensitive? Pause capture from the menu bar in one click.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="menubar-demo" aria-hidden="true">
+        <div class="mb">
+          <span class="mb-app">Notes</span><span>File</span><span>Edit</span><span>View</span><span class="grow"></span>
+          <span class="mb-tray"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></span>
+          <span>Fri 15:42</span>
+        </div>
+        <div class="mb-drop">
+          <div class="it hi"><span>Open Stash</span><small>⌘⇧V</small></div>
+          <div class="it"><span>Pause Capture</span><span class="sw-toggle"></span></div>
+          <hr />
+          <div class="it"><span>Clear History (keeps pinned)</span></div>
+          <div class="it"><span>Quit Stash</span><small>⌘Q</small></div>
+        </div>
+        <div class="mb-pw">
+          <span class="pw-src">1Password</span><span class="pw-dots">••••••••••••</span>
+          <span class="pw-badge"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>not saved</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shortcuts -->
+    <section class="shortcuts" id="shortcuts" aria-labelledby="sc-h">
+      <h2 id="sc-h">Every shortcut, on one page.</h2>
+      <div class="sc-cols">
+        <table>
+          <caption>Anywhere on your Mac</caption>
+          <tbody>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">⇧</kbd><kbd class="k">V</kbd></td><td>Open the paste menu at your cursor</td></tr>
+            <tr><td><kbd class="k">⌃</kbd><kbd class="k">⌥</kbd><kbd class="k">1–9</kbd></td><td>Paste pinned item 1–9</td></tr>
+            <tr><td><kbd class="k">⌃</kbd><kbd class="k">⌥</kbd><kbd class="k">V</kbd></td><td>Paste the copy before the current one</td></tr>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">V</kbd></td><td>Unchanged: pastes your latest copy</td></tr>
+          </tbody>
+        </table>
+        <table>
+          <caption>In the paste menu</caption>
+          <tbody>
+            <tr><td><kbd class="k">1–9</kbd></td><td>Paste that item</td></tr>
+            <tr><td><kbd class="k">↑</kbd><kbd class="k">↓</kbd><kbd class="k">↵</kbd></td><td>Choose and paste</td></tr>
+            <tr><td><kbd class="k">⇧</kbd><kbd class="k">↵</kbd></td><td>Copy only</td></tr>
+            <tr><td><kbd class="k">⇥</kbd></td><td>Switch Recent / Pinned</td></tr>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">O</kbd></td><td>Open the full window</td></tr>
+          </tbody>
+        </table>
+        <table>
+          <caption>In the full window</caption>
+          <tbody>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">1–9</kbd></td><td>Quick paste</td></tr>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">P</kbd></td><td>Pin or unpin</td></tr>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">E</kbd></td><td>Edit before pasting</td></tr>
+            <tr><td><kbd class="k">⌘</kbd><kbd class="k">⌫</kbd></td><td>Delete (<kbd class="k sm">⌘</kbd><kbd class="k sm">Z</kbd> to undo)</td></tr>
+            <tr><td><kbd class="k">⇥</kbd></td><td>Next filter</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sc-note">Change the main shortcut any time in Settings: click the field and press a new key combination.</p>
+    </section>
+
+    <!-- Install -->
+    <section class="install" id="install" aria-labelledby="in-h">
+      <h2 id="in-h">Install in a minute.</h2>
+      <div class="in-cols">
+        <div class="in-dl">
+          <ol class="steps">
+            <li><b>Download</b> <a href="https://github.com/HusDev/stash/releases/latest/download/Stash.dmg">Stash.dmg</a> and drag Stash into Applications.</li>
+            <li><b>Open it the first time with right-click → Open.</b> Stash isn't signed with an Apple developer certificate yet, so macOS asks once.</li>
+            <li><b>Allow Accessibility</b> in System Settings → Privacy &amp; Security. It lets Stash find your text cursor and paste for you. Without it, Stash copies and you press <kbd class="k sm">⌘</kbd><kbd class="k sm">V</kbd>.</li>
+          </ol>
+          <a class="btn primary" href="https://github.com/HusDev/stash/releases/latest/download/Stash.dmg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+            Download for macOS
+          </a>
+        </div>
+        <div class="in-src">
+          <h3>Or build it yourself</h3>
+          <p>You need Rust and Node.js. Stash is about 1,600 lines of Rust and plain JavaScript on Tauri 2.</p>
+          <div class="shell">
+            <button class="copy" type="button" data-copy="git clone https://github.com/HusDev/stash.git && cd stash && npm install && npm run build">Copy</button>
+<pre><code><span class="pr">$</span> git clone https://github.com/HusDev/stash.git
+<span class="pr">$</span> cd stash
+<span class="pr">$</span> npm install
+<span class="pr">$</span> npm run build</code></pre>
+          </div>
+          <p class="fine">The app lands in <code>src-tauri/target/release/bundle/macos/Stash.app</code>. Run <code>npm run dev</code> while hacking on it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Close -->
+    <section class="close" aria-labelledby="close-h">
+      <img src="stash-icon.png" alt="" width="112" height="112" />
+      <h2 id="close-h">Stop losing what you copied.</h2>
+      <div class="cta">
+        <a class="btn primary big" href="https://github.com/HusDev/stash/releases/latest/download/Stash.dmg">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+          Download Stash
+        </a>
+        <a class="btn ghost" href="https://github.com/HusDev/stash">Star it on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Stash · MIT licensed · built with <a href="https://tauri.app">Tauri</a></span>
+    <span>Made in Barcelona by <a href="https://github.com/HusDev">@HusDev</a></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "title": "Choose the page structure",
+  "question": "The look is already set by your video (warm paper, indigo, Montserrat + mono keys). Pick how the page is put together.",
+  "options": [
+    {
+      "id": "followed",
+      "label": "One copy, followed",
+      "kicker": "THE ROLL",
+      "lineage": "scroll story around one real clipboard item",
+      "thesis": "The page follows one copied address from lost, to found at your cursor, to pinned and pasted anywhere.",
+      "palette": ["#f3f1ec", "#16161d", "#5b5ef0", "#a855f7"],
+      "materials": ["warm paper", "real Stash UI rebuilt in HTML", "keycaps"],
+      "viewport": "A live note window reading 'My address is |' with the Stash paste menu open at the caret; you can press ⌘⇧V and 1–9 yourself. Headline and Download .dmg sit at the right.",
+      "risk": "The full shortcut reference and install steps come after the story, lower on the page.",
+      "wireframe": {"cols": 12, "rows": 10, "regions": [
+        {"label": "nav", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "live note + paste menu (try ⌘⇧V)", "x": 0, "y": 1, "w": 7, "h": 5, "accent": true},
+        {"label": "headline + Download .dmg", "x": 7, "y": 1, "w": 5, "h": 5},
+        {"label": "station: pinned ⌃⌥1–9", "x": 0, "y": 6, "w": 6, "h": 2},
+        {"label": "sticky address card", "x": 6, "y": 6, "w": 6, "h": 2, "accent": true},
+        {"label": "full window · privacy · install", "x": 0, "y": 8, "w": 12, "h": 2}
+      ]}
+    },
+    {
+      "id": "manual",
+      "label": "The field manual",
+      "lineage": "a finely typeset product manual",
+      "thesis": "A beautifully set manual: every shortcut, feature and install step, indexed by its key.",
+      "palette": ["#f3f1ec", "#16161d", "#5b5ef0", "#a855f7"],
+      "materials": ["warm paper", "keycap index", "numbered chapters"],
+      "viewport": "A title page with the app icon, a one-line promise and Download, above a keycap index of the 9 shortcuts that works as the table of contents.",
+      "risk": "Reads as documentation; less 'watch it work' energy up top.",
+      "wireframe": {"cols": 12, "rows": 10, "regions": [
+        {"label": "title page: icon + promise + Download", "x": 0, "y": 0, "w": 12, "h": 3, "accent": true},
+        {"label": "keycap index = contents", "x": 0, "y": 3, "w": 12, "h": 2},
+        {"label": "ch.1 paste menu", "x": 0, "y": 5, "w": 6, "h": 2},
+        {"label": "ch.2 quick paste", "x": 6, "y": 5, "w": 6, "h": 2},
+        {"label": "ch.3–5 window · privacy · install", "x": 0, "y": 7, "w": 12, "h": 3}
+      ]}
+    },
+    {
+      "id": "window",
+      "label": "The page is Stash",
+      "lineage": "the app's own full window at page scale",
+      "thesis": "The site is a giant Stash window: its history list is the navigation, the preview pane shows each feature.",
+      "palette": ["#f3f1ec", "#16161d", "#5b5ef0", "#a855f7"],
+      "materials": ["the real Stash window", "selection highlight", "keyboard navigation"],
+      "viewport": "One huge Stash window: the search bar holds the tagline, the list (Paste menu, Quick paste, Privacy, Install…) on the left, the selected item's preview on the right; Download is the 'Paste ↵' button. ↑↓ walks it.",
+      "risk": "Unusual navigation; on phones it must fall back to a normal scroll.",
+      "wireframe": {"cols": 12, "rows": 10, "regions": [
+        {"label": "search bar = tagline", "x": 1, "y": 0, "w": 10, "h": 1},
+        {"label": "filter chips", "x": 1, "y": 1, "w": 10, "h": 1},
+        {"label": "history list = sections", "x": 1, "y": 2, "w": 4, "h": 7, "accent": true},
+        {"label": "preview pane = feature detail", "x": 5, "y": 2, "w": 6, "h": 6},
+        {"label": "Paste ↵ = Download", "x": 5, "y": 8, "w": 6, "h": 1, "accent": true}
+      ]}
+    }
+  ],
+  "reroll": true,
+  "steer": true,
+  "buildPath": {"value": "code"}
+}
